@@ -1,0 +1,24 @@
+[project]
+name = "pdfkit"
+version = "0.1.0"
+description = "Deterministic, verifiable in-place text correction for born-digital PDFs"
+requires-python = ">=3.11"
+dependencies = [
+    "pikepdf>=9",
+    "pdfplumber>=0.11",
+    "fonttools>=4.50",
+    "pypdfium2>=4",
+    "Pillow>=10",
+    "numpy>=1.26",
+    "typer>=0.12",
+]
+
+[project.scripts]
+pdfkit = "pdfkit.cli:app"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["pdfkit"]
