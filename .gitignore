@@ -57,3 +57,13 @@ fonts/*.woff2
 
 # Logs
 *.log
+
+.claude
+
+# graphify
+graphify-out/cost.json
+graphify-out/cache/
+
+.env
+.*-env
+.*.env

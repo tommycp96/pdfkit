@@ -197,21 +197,36 @@ class Document:
         return hits
 
     def find_phrase(self, phrase: str, page: int | None = None) -> list[list[Run]]:
-        """Find consecutive single-glyph run spans spelling `phrase` (per-glyph
-        PDFs, e.g. Chrome/Skia print). Returns one run-list per occurrence."""
+        """Find consecutive run spans spelling `phrase` (per-glyph PDFs, e.g.
+        Chrome/Skia print). Returns one run-list per occurrence.
+
+        Runs are not always one char each (some pages mix multi-char runs), so
+        we map character offsets to run boundaries and only return spans that
+        align exactly to run edges — a match that starts or ends mid-run isn't a
+        clean per-glyph span and is skipped."""
         spans: list[list[Run]] = []
         for pi in range(len(self.pdf.pages)):
             if page is not None and pi != page:
                 continue
             runs = [r for r in self.runs if r.page_index == pi]
+            bounds, pos = [], 0
+            for idx, r in enumerate(runs):
+                bounds.append((pos, pos + len(r.text), idx))
+                pos += len(r.text)
             text = "".join(r.text for r in runs)
             start = 0
             while True:
                 i = text.find(phrase, start)
                 if i < 0:
                     break
-                spans.append(runs[i:i + len(phrase)])
-                start = i + 1
+                j = i + len(phrase)
+                covered = [idx for (s, e, idx) in bounds if s >= i and e <= j]
+                if covered and bounds[covered[0]][0] == i and bounds[covered[-1]][1] == j:
+                    spans.append([runs[k] for k in covered])
+                    start = j        # non-overlapping: a self-overlapping phrase
+                                     # (e.g. "00" in "000") shouldn't double-count
+                else:
+                    start = i + 1    # not run-aligned; keep scanning for one that is
         return spans
 
     def _has_label(self, run: Run, label: str) -> bool:

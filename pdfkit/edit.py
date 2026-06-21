@@ -318,14 +318,18 @@ def apply_phrase_correction(doc: Document, span: list, new_text: str) -> PhraseR
     size = span[0].size
 
     instrs = pikepdf.parse_content_stream(page)
-    slots = []  # (tj_index, td_index) per original glyph
+    slots = []  # (tj_index, td_index|None) per original glyph
     orig_adv: dict[str, float] = {}
-    for r in span:
+    for k, r in enumerate(span):
         ti = r.instr_index
-        if ti + 1 >= len(instrs) or str(instrs[ti + 1].operator) not in ("Td", "TD"):
+        has_td = ti + 1 < len(instrs) and str(instrs[ti + 1].operator) in ("Td", "TD")
+        # Only the block-final glyph may lack a trailing Td; an interior glyph
+        # without one means this isn't a clean per-glyph chain.
+        if not has_td and k != len(span) - 1:
             raise PhraseSpanError("span is not a clean per-glyph Tj+Td chain")
-        slots.append((ti, ti + 1))
-        orig_adv.setdefault(r.text, float(instrs[ti + 1].operands[0]))
+        slots.append((ti, ti + 1 if has_td else None))
+        if has_td:
+            orig_adv.setdefault(r.text, float(instrs[ti + 1].operands[0]))
 
     extended = model.missing_chars(new_text)
     if extended:
@@ -350,12 +354,18 @@ def apply_phrase_correction(doc: Document, span: list, new_text: str) -> PhraseR
         for k, c in enumerate(new_text):
             ti, tdi = slots[k]
             instrs[ti] = tj(c)
-            instrs[tdi] = td(c)
+            if tdi is not None:          # block-final glyph has no advance to set
+                instrs[tdi] = td(c)
     else:
-        first, last = slots[0][0], slots[-1][1]
+        first = slots[0][0]
+        last_tdi = slots[-1][1]
+        last = last_tdi if last_tdi is not None else slots[-1][0]
         rebuilt = []
-        for c in new_text:
-            rebuilt.append(tj(c)); rebuilt.append(td(c))
+        for idx, c in enumerate(new_text):
+            rebuilt.append(tj(c))
+            # Mirror the original: emit a trailing Td except on a block-final glyph.
+            if idx != len(new_text) - 1 or last_tdi is not None:
+                rebuilt.append(td(c))
         instrs[first:last + 1] = rebuilt
 
     page.Contents = doc.pdf.make_stream(pikepdf.unparse_content_stream(instrs))

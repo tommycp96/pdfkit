@@ -9,10 +9,12 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
 from pdfkit.document import Document
-from pdfkit.edit import (EditResult, FontUnavailable, apply_correction,
+from pdfkit.edit import (EditResult, FontUnavailable, PhraseResult,
+                         apply_correction, apply_phrase_correction,
                          find_blanks, repair_fonts)
 from pdfkit.metadata import ProvenanceForgery, scrub_metadata
-from pdfkit.verify import verify_correction, verify_repair
+from pdfkit.verify import (verify_correction, verify_phrase_correction,
+                           verify_repair)
 
 import os
 
@@ -120,6 +122,99 @@ def test_repair_fills_blank_glyphs_doc_wide(tmp_path):
     assert before_runs == after_runs  # repair never alters text
     rep = verify_repair(SAMPLE, out, res.filled, packet_dir=None)
     assert rep.verified
+
+
+def _find_phrase_word(d):
+    """Return (word, span) for a per-glyph alphanumeric word (len>=3) in the
+    fixture, or None when the fixture isn't a per-glyph (Chrome/Skia) document."""
+    for pi in range(len(d.pdf.pages)):
+        runs = [r for r in d.runs if r.page_index == pi]
+        if not runs or sum(len(r.text) == 1 for r in runs) < 0.5 * len(runs):
+            continue
+        i = 0
+        while i < len(runs):
+            if len(runs[i].text) == 1 and runs[i].text.isalnum():
+                j = i
+                while j < len(runs) and len(runs[j].text) == 1 and runs[j].text.isalnum():
+                    j += 1
+                word = "".join(r.text for r in runs[i:j])
+                if len(word) >= 3:
+                    for span in d.find_phrase(word, page=pi):
+                        if (len(span) == len(word) and all(len(r.text) == 1 for r in span)
+                                and "".join(r.text for r in span) == word):
+                            return word, span
+                i = j
+            else:
+                i += 1
+    return None
+
+
+def _transpose(word):
+    """A same-length variant of `word` by swapping two distinct adjacent chars."""
+    for k in range(len(word) - 1):
+        if word[k] != word[k + 1]:
+            return word[:k] + word[k + 1] + word[k] + word[k + 2:]
+    return None
+
+
+def test_phrase_same_length_correction(tmp_path):
+    """A per-glyph phrase span rewritten to a same-length variant verifies, and
+    nothing outside the span changes."""
+    d = Document(SAMPLE)
+    found = _find_phrase_word(d)
+    if not found:
+        d.close(); pytest.skip("fixture is not a per-glyph (Chrome/Skia) document")
+    word, span = found
+    new = _transpose(word)
+    if not new:
+        d.close(); pytest.skip("no transposable per-glyph word in fixture")
+    res = apply_phrase_correction(d, span, new)
+    out = str(tmp_path / "phrase.pdf")
+    d.pdf.save(out); d.close()
+    rep = verify_phrase_correction(SAMPLE, out, res, span, packet_dir=None)
+    assert rep.verified, [x.name for x in rep.gates if x.critical and not x.passed]
+    g = {x.name: x for x in rep.gates}
+    assert g["no_collateral_change"].passed
+    assert g["structure_unchanged"].passed
+
+
+def test_phrase_length_change(tmp_path):
+    """Grow then shrink a per-glyph phrase span; both must verify."""
+    for i, mutate in enumerate((lambda w: w + w[-1], lambda w: w[:-1])):
+        d = Document(SAMPLE)
+        found = _find_phrase_word(d)
+        if not found:
+            d.close(); pytest.skip("fixture is not a per-glyph (Chrome/Skia) document")
+        word, span = found
+        new = mutate(word)
+        res = apply_phrase_correction(d, span, new)
+        out = str(tmp_path / f"phrase_len{i}.pdf")
+        d.pdf.save(out); d.close()
+        rep = verify_phrase_correction(SAMPLE, out, res, span, packet_dir=None)
+        assert rep.verified, (new, [x.name for x in rep.gates if x.critical and not x.passed])
+
+
+def test_phrase_negative_control(tmp_path):
+    """A deliberately broken phrase edit (span glyphs forced to blank gids) must
+    fail verification even though we claim a real replacement text."""
+    d = Document(SAMPLE)
+    found = _find_phrase_word(d)
+    if not found:
+        d.close(); pytest.skip("fixture is not a per-glyph (Chrome/Skia) document")
+    word, span = found
+    new = _transpose(word) or (word[:-1] + word[0])
+    page = d.pdf.pages[span[0].page_index]
+    instrs = pikepdf.parse_content_stream(page)
+    for r in span:                       # overwrite each glyph with a blank gid
+        instrs[r.instr_index] = pikepdf.ContentStreamInstruction(
+            [pikepdf.String(bytes([0, 3]))], pikepdf.Operator("Tj"))
+    page.Contents = d.pdf.make_stream(pikepdf.unparse_content_stream(instrs))
+    out = str(tmp_path / "phrase_broken.pdf")
+    d.pdf.save(out); d.close()
+    res = PhraseResult(span[0].page_index, word, new,
+                       sorted({r.font for r in span}), [])
+    rep = verify_phrase_correction(SAMPLE, out, res, span, packet_dir=None)
+    assert not rep.verified
 
 
 def test_metadata_scrub_and_backdate_refusal(tmp_path):

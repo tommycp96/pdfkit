@@ -1,0 +1,102 @@
+{
+  "benchmark/run_benchmark.py": {
+    "mtime": 1782048792.899116,
+    "ast_hash": "bd200415da2c05189c00defc98022a4a",
+    "semantic_hash": ""
+  },
+  "pdfkit/__init__.py": {
+    "mtime": 1781367104.4543607,
+    "ast_hash": "b0bd361fd1dbb23200fab51897965665",
+    "semantic_hash": "b0bd361fd1dbb23200fab51897965665"
+  },
+  "pdfkit/cli.py": {
+    "mtime": 1782048769.649834,
+    "ast_hash": "55e32176b42b026a6098fbe3e00217c3",
+    "semantic_hash": ""
+  },
+  "pdfkit/document.py": {
+    "mtime": 1782048777.6224918,
+    "ast_hash": "e22e96f358a1cbcb4df345b6a711eaa7",
+    "semantic_hash": ""
+  },
+  "pdfkit/edit.py": {
+    "mtime": 1782032862.8123753,
+    "ast_hash": "8e8ec0a6957454cfeafcdbadba3c99be",
+    "semantic_hash": ""
+  },
+  "pdfkit/fonts.py": {
+    "mtime": 1781367104.4566576,
+    "ast_hash": "0f94148282fdfdd7e5e2ed839b3ec125",
+    "semantic_hash": "0f94148282fdfdd7e5e2ed839b3ec125"
+  },
+  "pdfkit/metadata.py": {
+    "mtime": 1781367104.4571264,
+    "ast_hash": "91382096e71ff8f7a729a04cfcbbb5f9",
+    "semantic_hash": "91382096e71ff8f7a729a04cfcbbb5f9"
+  },
+  "pdfkit/render.py": {
+    "mtime": 1781367104.4575958,
+    "ast_hash": "7b54e43e6bb74aadc8f049df81cf6ebb",
+    "semantic_hash": "7b54e43e6bb74aadc8f049df81cf6ebb"
+  },
+  "pdfkit/verify.py": {
+    "mtime": 1782048881.35356,
+    "ast_hash": "80030a272bb6a2154a37cf077eec392c",
+    "semantic_hash": ""
+  },
+  "pyproject.toml": {
+    "mtime": 1781367104.477568,
+    "ast_hash": "20ff585220177e86257ec8263a289c30",
+    "semantic_hash": "20ff585220177e86257ec8263a289c30"
+  },
+  "tests/test_correction.py": {
+    "mtime": 1782031878.5448556,
+    "ast_hash": "0f93678d0d5f89e740114a7c4f3ac07a",
+    "semantic_hash": ""
+  },
+  "BENCHMARK.md": {
+    "mtime": 1782031906.5028872,
+    "ast_hash": "5b8a3027abc3fe39a611f384ed22e661",
+    "semantic_hash": ""
+  },
+  "CONTEXT.md": {
+    "mtime": 1781448435.7787225,
+    "ast_hash": "6eb5b335a3997727b43a14e95f0114b2",
+    "semantic_hash": "6eb5b335a3997727b43a14e95f0114b2"
+  },
+  "README.md": {
+    "mtime": 1782031902.5117712,
+    "ast_hash": "8616154e863459676e4d317c7aebf6eb",
+    "semantic_hash": ""
+  },
+  "docs/adr/0001-text-layer-extraction-not-computer-vision.md": {
+    "mtime": 1781367104.4721289,
+    "ast_hash": "8158732c667adf486cc432d85b9db616",
+    "semantic_hash": "8158732c667adf486cc432d85b9db616"
+  },
+  "docs/adr/0002-extend-font-subset-not-reembed-full-font.md": {
+    "mtime": 1781367104.4725242,
+    "ast_hash": "4bb61b6508228a904c7fcf70a5541e1f",
+    "semantic_hash": "4bb61b6508228a904c7fcf70a5541e1f"
+  },
+  "fonts/README.md": {
+    "mtime": 1781367132.692353,
+    "ast_hash": "4fb7ccedfd9d066540a35e788dfff9f3",
+    "semantic_hash": "4fb7ccedfd9d066540a35e788dfff9f3"
+  },
+  "pdfkit-handoff-20260620-222149.md": {
+    "mtime": 1781965613.66209,
+    "ast_hash": "e2e5d81175323d6c241c9472b64458e3",
+    "semantic_hash": "e2e5d81175323d6c241c9472b64458e3"
+  },
+  ".claude/settings.json": {
+    "mtime": 1781966578.7138495,
+    "ast_hash": "e1073342e958ac9f00716938c8f165e3",
+    "semantic_hash": ""
+  },
+  "CLAUDE.md": {
+    "mtime": 1781966602.2849922,
+    "ast_hash": "881b89d0f10d36dbc4087ed448ef8350",
+    "semantic_hash": ""
+  }
+}

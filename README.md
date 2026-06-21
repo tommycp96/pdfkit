@@ -45,6 +45,11 @@ pdfkit correct document.pdf --replace "1,000.00=1,200.00" \
 #    filling them from the original font. Changes no text/layout.
 pdfkit repair document.pdf -o repaired.pdf
 
+# 4b. Browser-printed (Chrome/Skia) PDFs draw one glyph per operator, so a value
+#     is many runs, not one. `correct` auto-detects this and rewrites the whole
+#     span; pass --phrase to force it. Same dry-run / --apply / packet contract.
+pdfkit correct chrome-print.pdf --replace "Acme=Acme Co" --phrase --apply -o out.pdf
+
 # 5. Normalize metadata for an outgoing file (honest; refuses backdating)
 pdfkit scrub-metadata out.pdf --set "Author=Acme HR"
 

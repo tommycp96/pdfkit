@@ -16,9 +16,14 @@ several plausible corrections are synthesized:
 | `force_ext` | introduces `1`/`7` (absent from bold subsets) — extension path |
 | `word_same` / `word_swap` | letter change/transpose — proportional glyphs |
 | `word_grow` / `word_shrink` | word length change — alignment with proportional glyphs |
+| `phrase_same` | transpose two glyphs in a per-glyph span — multi-run rewrite |
+| `phrase_grow` / `phrase_shrink` | per-glyph span length change — span rebuild |
 
-Each scenario is applied to a fresh copy and run through the full verifier
-(`verify_correction`). The headline metric is `VERIFIED / total`.
+Single-run scenarios run through `verify_correction`; the `phrase_*` scenarios
+(per-glyph Chrome/Skia layout) run through `verify_phrase_correction`. The
+`phrase_*` kinds only appear for per-glyph fixtures — reporting-engine PDFs that
+draw whole values as one operator yield none. The headline metric is
+`VERIFIED / total`.
 
 ## Result
 

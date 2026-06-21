@@ -7,9 +7,10 @@ from pathlib import Path
 import typer
 
 from .document import Document
-from .edit import FontUnavailable, apply_correction, repair_fonts
+from .edit import (FontUnavailable, PhraseSpanError, apply_correction,
+                   apply_phrase_correction, repair_fonts)
 from .metadata import ProvenanceForgery, scrub_metadata
-from .verify import verify_correction, verify_repair
+from .verify import verify_correction, verify_phrase_correction, verify_repair
 
 app = typer.Typer(add_completion=False, help="Verifiable in-place PDF text correction.")
 
@@ -46,6 +47,7 @@ def correct(
     align: str = typer.Option("auto", help="auto|left|right alignment handling"),
     apply: bool = typer.Option(False, "--apply", help="actually write + verify (default: dry-run)"),
     repair: bool = typer.Option(False, "--repair", help="also repair pre-existing blank glyphs document-wide"),
+    phrase: bool = typer.Option(False, "--phrase", help="force per-glyph phrase mode (Chrome/Skia PDFs)"),
 ):
     """Correct a piece of text in place; dry-run previews, --apply writes + verifies."""
     if "=" not in replace:
@@ -53,9 +55,11 @@ def correct(
     old, new = replace.split("=", 1)
     d = Document(pdf)
     matches = d.find(old, page=page, near=near)
-    if not matches:
-        typer.echo(f"no run contains {old!r}" + (f" near {near!r}" if near else ""), err=True)
-        d.close(); raise typer.Exit(1)
+    # Auto-fallback: when OLD isn't a single run (per-glyph PDFs draw one glyph
+    # per Tj), correct the consecutive run span instead. --phrase forces it.
+    if phrase or not matches:
+        _correct_phrase(d, pdf, old, new, page, near, occurrence, out, apply, repair)
+        return
     if len(matches) > 1 and occurrence is None:
         typer.echo(f"{len(matches)} matches for {old!r} — choose with --occurrence N:")
         for i, r in enumerate(matches):
@@ -93,23 +97,10 @@ def correct(
     # --repair: verify the two transforms independently. The correction is
     # checked against a correction-only intermediate (so its localized/single-
     # change guarantee still holds); the repair is checked on top of that.
-    import tempfile
-    interim = tempfile.NamedTemporaryFile(suffix=".pdf", delete=False).name
-    d.pdf.save(interim)
-    filled = repair_fonts(d).filled
-    d.pdf.save(out); d.close()
-    rep_c = verify_correction(pdf, interim, res, run, packet_dir=None)
-    rep_r = verify_repair(interim, out, filled, packet_dir=packet)
-    verified = rep_c.verified and rep_r.verified
-    typer.echo(f"\n{'VERIFIED' if verified else 'FAILED'}  "
-               f"({old!r} -> {new!r}); also repaired {filled or 'none'}")
-    typer.echo("  correction gates:")
-    for g in rep_c.gates:
-        typer.echo(f"    [{'PASS' if g.passed else 'FAIL'}] {g.name}: {g.detail}")
-    typer.echo("  repair gates:")
-    for g in rep_r.gates:
-        typer.echo(f"    [{'PASS' if g.passed else 'FAIL'}] {g.name}: {g.detail}")
-    typer.echo(f"\noutput : {out}\nreview : {packet}/report.md")
+    rep_c, rep_r, filled = _repair_and_verify(
+        d, pdf, out, packet,
+        lambda interim: verify_correction(pdf, interim, res, run, packet_dir=None))
+    verified = _print_repair_report(f"{old!r} -> {new!r}", rep_c, rep_r, filled, out, packet)
     raise typer.Exit(0 if verified else 5)
 
 
@@ -119,6 +110,103 @@ def _print_report(summary, rep, out, packet):
         adv = "" if g.critical else " (advisory)"
         typer.echo(f"  [{'PASS' if g.passed else 'FAIL'}] {g.name}{adv}: {g.detail}")
     typer.echo(f"\noutput : {out}\nreview : {packet}/report.md")
+
+
+def _repair_and_verify(d, pdf, out, packet, verify_fn):
+    """Apply font repair on top of an already-applied correction, then verify the
+    two transforms independently: the correction against a correction-only
+    interim, the repair on top of it. `verify_fn(interim)` runs the correction
+    verifier (single-run or phrase). Returns (rep_c, rep_r, filled) and always
+    removes the interim file."""
+    import os
+    import tempfile
+    interim = tempfile.NamedTemporaryFile(suffix=".pdf", delete=False).name
+    try:
+        d.pdf.save(interim)
+        filled = repair_fonts(d).filled
+        d.pdf.save(out); d.close()
+        rep_c = verify_fn(interim)
+        rep_r = verify_repair(interim, out, filled, packet_dir=packet)
+        return rep_c, rep_r, filled
+    finally:
+        try:
+            os.unlink(interim)
+        except OSError:
+            pass
+
+
+def _print_repair_report(headline, rep_c, rep_r, filled, out, packet):
+    verified = rep_c.verified and rep_r.verified
+    typer.echo(f"\n{'VERIFIED' if verified else 'FAILED'}  "
+               f"({headline}); also repaired {filled or 'none'}")
+    typer.echo("  correction gates:")
+    for g in rep_c.gates:
+        typer.echo(f"    [{'PASS' if g.passed else 'FAIL'}] {g.name}: {g.detail}")
+    typer.echo("  repair gates:")
+    for g in rep_r.gates:
+        typer.echo(f"    [{'PASS' if g.passed else 'FAIL'}] {g.name}: {g.detail}")
+    typer.echo(f"\noutput : {out}\nreview : {packet}/report.md")
+    return verified
+
+
+def _correct_phrase(d, pdf, old, new, page, near, occurrence, out, apply, repair):
+    """Per-glyph phrase correction: locate the consecutive run span spelling
+    OLD, then rewrite it. Same dry-run / --apply / --repair contract as the
+    single-run path, verified by verify_phrase_correction."""
+    if near is not None:
+        # In per-glyph PDFs the label is itself split into one run per glyph, so
+        # label-proximity matching can't work; say so instead of silently
+        # ignoring it, and point at the mechanism that does work here.
+        typer.echo("note: --near is not supported in per-glyph phrase mode; "
+                   "use --occurrence to pick among matches.", err=True)
+    spans = d.find_phrase(old, page=page)
+    if not spans:
+        typer.echo(f"no run or phrase span contains {old!r}", err=True)
+        d.close(); raise typer.Exit(1)
+    if len(spans) > 1 and occurrence is None:
+        typer.echo(f"{len(spans)} phrase matches for {old!r} — choose with --occurrence N:")
+        for i, span in enumerate(spans):
+            r = span[0]
+            typer.echo(f"  [{i}] page {r.page_index} ({r.x:.0f},{r.y:.0f})  "
+                       f"{''.join(s.text for s in span)!r}")
+        d.close(); raise typer.Exit(3)
+    span = spans[occurrence or 0]
+    pi = span[0].page_index
+    fonts = sorted({r.font for r in span})
+    extend = set()
+    for f in fonts:
+        extend |= set(d.models(pi)[f].missing_chars(new))
+
+    if not apply:
+        typer.echo("DRY RUN — no file written. Planned phrase correction:")
+        typer.echo(f"  page {pi}, fonts {fonts}, {len(span)} glyph run(s), {span[0].size:.1f}pt")
+        typer.echo(f"  {old!r}  ->  {new!r}")
+        typer.echo(f"  subset extension needed for: {sorted(extend) or 'none'}")
+        typer.echo("  re-run with --apply to write and verify.")
+        d.close(); raise typer.Exit(0)
+
+    out = out or _default_out(pdf, ".fixed")
+    if Path(out).resolve() == Path(pdf).resolve():
+        typer.echo("error: refusing to overwrite the original; choose -o", err=True)
+        d.close(); raise typer.Exit(2)
+    try:
+        res = apply_phrase_correction(d, span, new)
+    except (FontUnavailable, PhraseSpanError) as e:
+        typer.echo(f"cannot apply: {e}", err=True); d.close(); raise typer.Exit(4)
+
+    packet = Path(out).with_suffix(".review")
+    if not repair:
+        d.pdf.save(out); d.close()
+        rep = verify_phrase_correction(pdf, out, res, span, packet_dir=packet)
+        _print_report(f"{old!r} -> {new!r}, extended {res.extended_chars or 'none'}", rep, out, packet)
+        raise typer.Exit(0 if rep.verified else 5)
+
+    # --repair: verify the two transforms independently (see single-run path).
+    rep_c, rep_r, filled = _repair_and_verify(
+        d, pdf, out, packet,
+        lambda interim: verify_phrase_correction(pdf, interim, res, span, packet_dir=None))
+    verified = _print_repair_report(f"{old!r} -> {new!r}", rep_c, rep_r, filled, out, packet)
+    raise typer.Exit(0 if verified else 5)
 
 
 @app.command()
