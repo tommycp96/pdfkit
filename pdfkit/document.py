@@ -135,7 +135,9 @@ def _empty_outline_gids(fobj: pikepdf.Object, gids) -> set[int]:
 
 def extract_runs(page: pikepdf.Page, page_index: int,
                  models: dict[str, FontModel]) -> list[Run]:
-    """Walk the content stream, tracking font + position, emitting one Run per Tj."""
+    """Walk the content stream, tracking font + position, emitting one Run per
+    show-text operator (Tj, or TJ array). A TJ run concatenates the array's
+    string elements; the interleaved numbers are inter-glyph spacing only."""
     runs: list[Run] = []
     instrs = pikepdf.parse_content_stream(page)
     cur_font = None
@@ -155,9 +157,16 @@ def extract_runs(page: pikepdf.Page, page_index: int,
         elif op == "Tm":
             x = float(ops[4])
             y = float(ops[5])
-        elif op == "Tj":
-            raw = bytes(ops[0])
+        elif op in ("Tj", "TJ"):
             model = models.get(cur_font)
+            if op == "Tj":
+                raw = bytes(ops[0])
+            else:
+                # TJ array mixes string operands (pikepdf.Object) with numeric
+                # spacing adjustments (native int / decimal.Decimal); keep only
+                # the strings.
+                raw = b"".join(bytes(el) for el in ops[0]
+                               if isinstance(el, pikepdf.Object))
             text = model.decode(raw) if model else ""
             runs.append(Run(page_index, idx, text, cur_font or "", cur_size, x, y, raw))
     return runs

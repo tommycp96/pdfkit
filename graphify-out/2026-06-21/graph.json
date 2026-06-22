@@ -58,7 +58,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "benchmark_run_benchmark",
-      "community": 0,
+      "community": 13,
       "norm_label": "run_benchmark.py"
     },
     {
@@ -68,7 +68,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "benchmark_run_benchmark_variants",
-      "community": 0,
+      "community": 13,
       "norm_label": "variants()"
     },
     {
@@ -78,7 +78,7 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "benchmark_run_benchmark_word_variants",
-      "community": 0,
+      "community": 13,
       "norm_label": "word_variants()"
     },
     {
@@ -88,7 +88,7 @@
       "source_location": "L77",
       "_origin": "ast",
       "id": "benchmark_run_benchmark_phrase_variants",
-      "community": 0,
+      "community": 13,
       "norm_label": "phrase_variants()"
     },
     {
@@ -98,7 +98,7 @@
       "source_location": "L90",
       "_origin": "ast",
       "id": "benchmark_run_benchmark_phrase_targets",
-      "community": 0,
+      "community": 13,
       "norm_label": "phrase_targets()"
     },
     {
@@ -108,7 +108,7 @@
       "source_location": "L90",
       "_origin": "ast",
       "id": "benchmark_run_benchmark_py_document",
-      "community": 0,
+      "community": 13,
       "norm_label": "document"
     },
     {
@@ -118,7 +118,7 @@
       "source_location": "L122",
       "_origin": "ast",
       "id": "benchmark_run_benchmark_clean_phrase_span",
-      "community": 0,
+      "community": 13,
       "norm_label": "_clean_phrase_span()"
     },
     {
@@ -128,7 +128,7 @@
       "source_location": "L131",
       "_origin": "ast",
       "id": "benchmark_run_benchmark_run",
-      "community": 0,
+      "community": 13,
       "norm_label": "run()"
     },
     {
@@ -138,7 +138,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "benchmark_run_benchmark_rationale_1",
-      "community": 0,
+      "community": 13,
       "norm_label": "acceptance benchmark: generate realistic corrections, measure verified rate.  fo"
     },
     {
@@ -148,7 +148,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "benchmark_run_benchmark_rationale_30",
-      "community": 0,
+      "community": 13,
       "norm_label": "return (kind, new_text) corrections for a value string."
     },
     {
@@ -158,7 +158,7 @@
       "source_location": "L58",
       "_origin": "ast",
       "id": "benchmark_run_benchmark_rationale_58",
-      "community": 0,
+      "community": 13,
       "norm_label": "corrections for an alphabetic word: typo-fix style edits with proportional     ("
     },
     {
@@ -168,7 +168,7 @@
       "source_location": "L78",
       "_origin": "ast",
       "id": "benchmark_run_benchmark_rationale_78",
-      "community": 0,
+      "community": 13,
       "norm_label": "corrections for a per-glyph word span (chrome/skia layout)."
     },
     {
@@ -178,7 +178,7 @@
       "source_location": "L91",
       "_origin": "ast",
       "id": "benchmark_run_benchmark_rationale_91",
-      "community": 0,
+      "community": 13,
       "norm_label": "unique (page, word) targets in per-glyph documents: consecutive     single-glyph"
     },
     {
@@ -188,7 +188,7 @@
       "source_location": "L123",
       "_origin": "ast",
       "id": "benchmark_run_benchmark_rationale_123",
-      "community": 0,
+      "community": 13,
       "norm_label": "first per-glyph span on `page` whose runs spell exactly `word`."
     },
     {
@@ -238,7 +238,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "pdfkit_cli_inspect",
-      "community": 5,
+      "community": 4,
       "norm_label": "inspect()"
     },
     {
@@ -255,17 +255,37 @@
       "label": "_print_report()",
       "file_type": "code",
       "source_file": "pdfkit/cli.py",
-      "source_location": "L120",
+      "source_location": "L107",
       "_origin": "ast",
       "id": "pdfkit_cli_print_report",
       "community": 5,
       "norm_label": "_print_report()"
     },
     {
+      "label": "_repair_and_verify()",
+      "file_type": "code",
+      "source_file": "pdfkit/cli.py",
+      "source_location": "L115",
+      "_origin": "ast",
+      "id": "pdfkit_cli_repair_and_verify",
+      "community": 5,
+      "norm_label": "_repair_and_verify()"
+    },
+    {
+      "label": "_print_repair_report()",
+      "file_type": "code",
+      "source_file": "pdfkit/cli.py",
+      "source_location": "L138",
+      "_origin": "ast",
+      "id": "pdfkit_cli_print_repair_report",
+      "community": 5,
+      "norm_label": "_print_repair_report()"
+    },
+    {
       "label": "_correct_phrase()",
       "file_type": "code",
       "source_file": "pdfkit/cli.py",
-      "source_location": "L128",
+      "source_location": "L152",
       "_origin": "ast",
       "id": "pdfkit_cli_correct_phrase",
       "community": 5,
@@ -275,7 +295,7 @@
       "label": "repair()",
       "file_type": "code",
       "source_file": "pdfkit/cli.py",
-      "source_location": "L196",
+      "source_location": "L213",
       "_origin": "ast",
       "id": "pdfkit_cli_repair",
       "community": 5,
@@ -285,7 +305,7 @@
       "label": "scrub_metadata_cmd()",
       "file_type": "code",
       "source_file": "pdfkit/cli.py",
-      "source_location": "L230",
+      "source_location": "L247",
       "_origin": "ast",
       "id": "pdfkit_cli_scrub_metadata_cmd",
       "community": 5,
@@ -295,10 +315,10 @@
       "label": "verify()",
       "file_type": "code",
       "source_file": "pdfkit/cli.py",
-      "source_location": "L251",
+      "source_location": "L268",
       "_origin": "ast",
       "id": "pdfkit_cli_verify",
-      "community": 1,
+      "community": 5,
       "norm_label": "verify()"
     },
     {
@@ -318,7 +338,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "pdfkit_cli_rationale_25",
-      "community": 5,
+      "community": 4,
       "norm_label": "list positioned text runs (text, page, coords, font, size)."
     },
     {
@@ -332,12 +352,22 @@
       "norm_label": "correct a piece of text in place; dry-run previews, --apply writes + verifies."
     },
     {
+      "label": "Apply font repair on top of an already-applied correction, then verify the     t",
+      "file_type": "rationale",
+      "source_file": "pdfkit/cli.py",
+      "source_location": "L116",
+      "_origin": "ast",
+      "id": "pdfkit_cli_rationale_116",
+      "community": 5,
+      "norm_label": "apply font repair on top of an already-applied correction, then verify the     t"
+    },
+    {
       "label": "Per-glyph phrase correction: locate the consecutive run span spelling     OLD, t",
       "file_type": "rationale",
       "source_file": "pdfkit/cli.py",
-      "source_location": "L129",
+      "source_location": "L153",
       "_origin": "ast",
-      "id": "pdfkit_cli_rationale_129",
+      "id": "pdfkit_cli_rationale_153",
       "community": 5,
       "norm_label": "per-glyph phrase correction: locate the consecutive run span spelling     old, t"
     },
@@ -345,9 +375,9 @@
       "label": "Fill empty/blank glyph outlines document-wide from the original font.      Chang",
       "file_type": "rationale",
       "source_file": "pdfkit/cli.py",
-      "source_location": "L200",
+      "source_location": "L217",
       "_origin": "ast",
-      "id": "pdfkit_cli_rationale_200",
+      "id": "pdfkit_cli_rationale_217",
       "community": 5,
       "norm_label": "fill empty/blank glyph outlines document-wide from the original font.      chang"
     },
@@ -355,9 +385,9 @@
       "label": "Remove tool/identity metadata and normalize to honest values.",
       "file_type": "rationale",
       "source_file": "pdfkit/cli.py",
-      "source_location": "L235",
+      "source_location": "L252",
       "_origin": "ast",
-      "id": "pdfkit_cli_rationale_235",
+      "id": "pdfkit_cli_rationale_252",
       "community": 5,
       "norm_label": "remove tool/identity metadata and normalize to honest values."
     },
@@ -365,10 +395,10 @@
       "label": "Re-run verification gates comparing an edited file to the original.",
       "file_type": "rationale",
       "source_file": "pdfkit/cli.py",
-      "source_location": "L252",
+      "source_location": "L269",
       "_origin": "ast",
-      "id": "pdfkit_cli_rationale_252",
-      "community": 1,
+      "id": "pdfkit_cli_rationale_269",
+      "community": 5,
       "norm_label": "re-run verification gates comparing an edited file to the original."
     },
     {
@@ -388,7 +418,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "pdfkit_document_fontmodel",
-      "community": 2,
+      "community": 0,
       "norm_label": "fontmodel"
     },
     {
@@ -408,7 +438,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "pdfkit_document_fontmodel_needs_glyph",
-      "community": 2,
+      "community": 0,
       "norm_label": ".needs_glyph()"
     },
     {
@@ -418,7 +448,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "pdfkit_document_fontmodel_missing_chars",
-      "community": 2,
+      "community": 0,
       "norm_label": ".missing_chars()"
     },
     {
@@ -428,7 +458,7 @@
       "source_location": "L53",
       "_origin": "ast",
       "id": "pdfkit_document_fontmodel_encode",
-      "community": 2,
+      "community": 0,
       "norm_label": ".encode()"
     },
     {
@@ -438,7 +468,7 @@
       "source_location": "L61",
       "_origin": "ast",
       "id": "pdfkit_document_fontmodel_width_of",
-      "community": 2,
+      "community": 0,
       "norm_label": ".width_of()"
     },
     {
@@ -448,7 +478,7 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "pdfkit_document_run",
-      "community": 2,
+      "community": 0,
       "norm_label": "run"
     },
     {
@@ -528,7 +558,7 @@
       "source_location": "L175",
       "_origin": "ast",
       "id": "pdfkit_document_document",
-      "community": 2,
+      "community": 4,
       "norm_label": "document"
     },
     {
@@ -548,7 +578,7 @@
       "source_location": "L187",
       "_origin": "ast",
       "id": "pdfkit_document_document_models",
-      "community": 2,
+      "community": 4,
       "norm_label": ".models()"
     },
     {
@@ -558,7 +588,7 @@
       "source_location": "L190",
       "_origin": "ast",
       "id": "pdfkit_document_document_find",
-      "community": 2,
+      "community": 4,
       "norm_label": ".find()"
     },
     {
@@ -568,27 +598,27 @@
       "source_location": "L199",
       "_origin": "ast",
       "id": "pdfkit_document_document_find_phrase",
-      "community": 2,
+      "community": 4,
       "norm_label": ".find_phrase()"
     },
     {
       "label": "._has_label()",
       "file_type": "code",
       "source_file": "pdfkit/document.py",
-      "source_location": "L229",
+      "source_location": "L232",
       "_origin": "ast",
       "id": "pdfkit_document_document_has_label",
-      "community": 2,
+      "community": 4,
       "norm_label": "._has_label()"
     },
     {
       "label": ".close()",
       "file_type": "code",
       "source_file": "pdfkit/document.py",
-      "source_location": "L241",
+      "source_location": "L244",
       "_origin": "ast",
       "id": "pdfkit_document_document_close",
-      "community": 2,
+      "community": 4,
       "norm_label": ".close()"
     },
     {
@@ -608,7 +638,7 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "pdfkit_document_rationale_36",
-      "community": 2,
+      "community": 0,
       "norm_label": "a char needs a subset fix if absent, or present but with an empty         outlin"
     },
     {
@@ -618,7 +648,7 @@
       "source_location": "L54",
       "_origin": "ast",
       "id": "pdfkit_document_rationale_54",
-      "community": 2,
+      "community": 0,
       "norm_label": "encode text to 2-byte gid string. caller must ensure no missing chars."
     },
     {
@@ -628,7 +658,7 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "pdfkit_document_rationale_62",
-      "community": 2,
+      "community": 0,
       "norm_label": "advance width of text in text-space units per 1 em (sum of /1000 * size)."
     },
     {
@@ -658,17 +688,17 @@
       "source_location": "L200",
       "_origin": "ast",
       "id": "pdfkit_document_rationale_200",
-      "community": 2,
+      "community": 4,
       "norm_label": "find consecutive run spans spelling `phrase` (per-glyph pdfs, e.g.         chrom"
     },
     {
       "label": "True if `label` text appears on the same page to the left/above run.",
       "file_type": "rationale",
       "source_file": "pdfkit/document.py",
-      "source_location": "L230",
+      "source_location": "L233",
       "_origin": "ast",
-      "id": "pdfkit_document_rationale_230",
-      "community": 2,
+      "id": "pdfkit_document_rationale_233",
+      "community": 4,
       "norm_label": "true if `label` text appears on the same page to the left/above run."
     },
     {
@@ -718,7 +748,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "pdfkit_edit_subsetmutator",
-      "community": 10,
+      "community": 0,
       "norm_label": "_subsetmutator"
     },
     {
@@ -728,7 +758,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "pdfkit_edit_subsetmutator_init",
-      "community": 10,
+      "community": 0,
       "norm_label": ".__init__()"
     },
     {
@@ -748,7 +778,7 @@
       "source_location": "L59",
       "_origin": "ast",
       "id": "pdfkit_edit_subsetmutator_materialize",
-      "community": 10,
+      "community": 0,
       "norm_label": "._materialize()"
     },
     {
@@ -758,7 +788,7 @@
       "source_location": "L68",
       "_origin": "ast",
       "id": "pdfkit_edit_subsetmutator_append",
-      "community": 10,
+      "community": 0,
       "norm_label": "._append()"
     },
     {
@@ -768,7 +798,7 @@
       "source_location": "L81",
       "_origin": "ast",
       "id": "pdfkit_edit_subsetmutator_append_glyph",
-      "community": 10,
+      "community": 0,
       "norm_label": ".append_glyph()"
     },
     {
@@ -778,7 +808,7 @@
       "source_location": "L84",
       "_origin": "ast",
       "id": "pdfkit_edit_subsetmutator_fill_glyph",
-      "community": 10,
+      "community": 0,
       "norm_label": ".fill_glyph()"
     },
     {
@@ -788,7 +818,7 @@
       "source_location": "L91",
       "_origin": "ast",
       "id": "pdfkit_edit_subsetmutator_finalize",
-      "community": 10,
+      "community": 0,
       "norm_label": ".finalize()"
     },
     {
@@ -838,7 +868,7 @@
       "source_location": "L145",
       "_origin": "ast",
       "id": "pdfkit_edit_repairresult",
-      "community": 2,
+      "community": 0,
       "norm_label": "repairresult"
     },
     {
@@ -848,7 +878,7 @@
       "source_location": "L150",
       "_origin": "ast",
       "id": "pdfkit_edit_repair_fonts",
-      "community": 5,
+      "community": 0,
       "norm_label": "repair_fonts()"
     },
     {
@@ -868,7 +898,7 @@
       "source_location": "L208",
       "_origin": "ast",
       "id": "pdfkit_edit_find_blanks",
-      "community": 0,
+      "community": 1,
       "norm_label": "find_blanks()"
     },
     {
@@ -978,7 +1008,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "pdfkit_edit_rationale_38",
-      "community": 10,
+      "community": 0,
       "norm_label": "copies glyph outlines from an original font into an embedded subset.      two op"
     },
     {
@@ -1008,7 +1038,7 @@
       "source_location": "L151",
       "_origin": "ast",
       "id": "pdfkit_edit_rationale_151",
-      "community": 5,
+      "community": 0,
       "norm_label": "fill empty-outline glyphs in place from the original font program.      document"
     },
     {
@@ -1018,7 +1048,7 @@
       "source_location": "L209",
       "_origin": "ast",
       "id": "pdfkit_edit_rationale_209",
-      "community": 0,
+      "community": 1,
       "norm_label": "list (base_font, char) for empty-outline glyphs that could be repaired     (orig"
     },
     {
@@ -1478,7 +1508,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "pdfkit_verify_py_path",
-      "community": 5,
+      "community": 1,
       "norm_label": "path"
     },
     {
@@ -1488,7 +1518,7 @@
       "source_location": "L124",
       "_origin": "ast",
       "id": "pdfkit_verify_verify_repair",
-      "community": 5,
+      "community": 1,
       "norm_label": "verify_repair()"
     },
     {
@@ -1542,10 +1572,20 @@
       "norm_label": "_phrase_word_box()"
     },
     {
-      "label": "rep_phrase_visual()",
+      "label": "_render_diff()",
       "file_type": "code",
       "source_file": "pdfkit/verify.py",
       "source_location": "L329",
+      "_origin": "ast",
+      "id": "pdfkit_verify_render_diff",
+      "community": 1,
+      "norm_label": "_render_diff()"
+    },
+    {
+      "label": "rep_phrase_visual()",
+      "file_type": "code",
+      "source_file": "pdfkit/verify.py",
+      "source_location": "L344",
       "_origin": "ast",
       "id": "pdfkit_verify_rep_phrase_visual",
       "community": 1,
@@ -1555,7 +1595,7 @@
       "label": "_write_phrase_packet()",
       "file_type": "code",
       "source_file": "pdfkit/verify.py",
-      "source_location": "L369",
+      "source_location": "L377",
       "_origin": "ast",
       "id": "pdfkit_verify_write_phrase_packet",
       "community": 1,
@@ -1565,7 +1605,7 @@
       "label": "_structure_invariants()",
       "file_type": "code",
       "source_file": "pdfkit/verify.py",
-      "source_location": "L394",
+      "source_location": "L402",
       "_origin": "ast",
       "id": "pdfkit_verify_structure_invariants",
       "community": 1,
@@ -1575,7 +1615,7 @@
       "label": "_provenance_check()",
       "file_type": "code",
       "source_file": "pdfkit/verify.py",
-      "source_location": "L412",
+      "source_location": "L420",
       "_origin": "ast",
       "id": "pdfkit_verify_provenance_check",
       "community": 1,
@@ -1585,7 +1625,7 @@
       "label": "_word_boxes()",
       "file_type": "code",
       "source_file": "pdfkit/verify.py",
-      "source_location": "L425",
+      "source_location": "L433",
       "_origin": "ast",
       "id": "pdfkit_verify_word_boxes",
       "community": 1,
@@ -1595,7 +1635,7 @@
       "label": "rep_visual()",
       "file_type": "code",
       "source_file": "pdfkit/verify.py",
-      "source_location": "L441",
+      "source_location": "L449",
       "_origin": "ast",
       "id": "pdfkit_verify_rep_visual",
       "community": 1,
@@ -1605,7 +1645,7 @@
       "label": "_write_packet()",
       "file_type": "code",
       "source_file": "pdfkit/verify.py",
-      "source_location": "L472",
+      "source_location": "L473",
       "_origin": "ast",
       "id": "pdfkit_verify_write_packet",
       "community": 1,
@@ -1638,7 +1678,7 @@
       "source_location": "L126",
       "_origin": "ast",
       "id": "pdfkit_verify_rationale_126",
-      "community": 5,
+      "community": 1,
       "norm_label": "verify a glyph-outline repair: no text/structure change, blanks gone, ink     ad"
     },
     {
@@ -1682,12 +1722,22 @@
       "norm_label": "image-px bbox spanning `phrase` on a page. prefer pdfplumber's tight     text se"
     },
     {
+      "label": "Render before/after for a page, diff them, and (when a packet dir is set)     wr",
+      "file_type": "rationale",
+      "source_file": "pdfkit/verify.py",
+      "source_location": "L330",
+      "_origin": "ast",
+      "id": "pdfkit_verify_rationale_330",
+      "community": 1,
+      "norm_label": "render before/after for a page, diff them, and (when a packet dir is set)     wr"
+    },
+    {
       "label": "Image-px bboxes for `text` on a page. Prefer exact words; fall back to any     w",
       "file_type": "rationale",
       "source_file": "pdfkit/verify.py",
-      "source_location": "L426",
+      "source_location": "L434",
       "_origin": "ast",
-      "id": "pdfkit_verify_rationale_426",
+      "id": "pdfkit_verify_rationale_434",
       "community": 1,
       "norm_label": "image-px bboxes for `text` on a page. prefer exact words; fall back to any     w"
     },
@@ -1791,7 +1841,7 @@
       "source_location": "L107",
       "_origin": "ast",
       "id": "tests_test_correction_test_repair_fills_blank_glyphs_doc_wide",
-      "community": 5,
+      "community": 1,
       "norm_label": "test_repair_fills_blank_glyphs_doc_wide()"
     },
     {
@@ -1801,7 +1851,7 @@
       "source_location": "L127",
       "_origin": "ast",
       "id": "tests_test_correction_find_phrase_word",
-      "community": 3,
+      "community": 4,
       "norm_label": "_find_phrase_word()"
     },
     {
@@ -1811,7 +1861,7 @@
       "source_location": "L152",
       "_origin": "ast",
       "id": "tests_test_correction_transpose",
-      "community": 3,
+      "community": 4,
       "norm_label": "_transpose()"
     },
     {
@@ -1821,7 +1871,7 @@
       "source_location": "L160",
       "_origin": "ast",
       "id": "tests_test_correction_test_phrase_same_length_correction",
-      "community": 3,
+      "community": 4,
       "norm_label": "test_phrase_same_length_correction()"
     },
     {
@@ -1831,7 +1881,7 @@
       "source_location": "L181",
       "_origin": "ast",
       "id": "tests_test_correction_test_phrase_length_change",
-      "community": 3,
+      "community": 4,
       "norm_label": "test_phrase_length_change()"
     },
     {
@@ -1841,7 +1891,7 @@
       "source_location": "L197",
       "_origin": "ast",
       "id": "tests_test_correction_test_phrase_negative_control",
-      "community": 3,
+      "community": 4,
       "norm_label": "test_phrase_negative_control()"
     },
     {
@@ -1891,7 +1941,7 @@
       "source_location": "L108",
       "_origin": "ast",
       "id": "tests_test_correction_rationale_108",
-      "community": 5,
+      "community": 1,
       "norm_label": "repairing fills the empty-outline glyphs for both occurrences, changes no     te"
     },
     {
@@ -1901,7 +1951,7 @@
       "source_location": "L128",
       "_origin": "ast",
       "id": "tests_test_correction_rationale_128",
-      "community": 3,
+      "community": 4,
       "norm_label": "return (word, span) for a per-glyph alphanumeric word (len>=3) in the     fixtur"
     },
     {
@@ -1911,7 +1961,7 @@
       "source_location": "L153",
       "_origin": "ast",
       "id": "tests_test_correction_rationale_153",
-      "community": 3,
+      "community": 4,
       "norm_label": "a same-length variant of `word` by swapping two distinct adjacent chars."
     },
     {
@@ -1921,7 +1971,7 @@
       "source_location": "L161",
       "_origin": "ast",
       "id": "tests_test_correction_rationale_161",
-      "community": 3,
+      "community": 4,
       "norm_label": "a per-glyph phrase span rewritten to a same-length variant verifies, and     not"
     },
     {
@@ -1931,7 +1981,7 @@
       "source_location": "L182",
       "_origin": "ast",
       "id": "tests_test_correction_rationale_182",
-      "community": 3,
+      "community": 4,
       "norm_label": "grow then shrink a per-glyph phrase span; both must verify."
     },
     {
@@ -1941,7 +1991,7 @@
       "source_location": "L198",
       "_origin": "ast",
       "id": "tests_test_correction_rationale_198",
-      "community": 3,
+      "community": 4,
       "norm_label": "a deliberately broken phrase edit (span glyphs forced to blank gids) must     fa"
     },
     {
@@ -2428,7 +2478,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 13,
       "norm_label": "pre-delivery correction",
       "id": "concept_pre_delivery_correction"
     },
@@ -2454,7 +2504,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 10,
+      "community": 0,
       "norm_label": "empty-outline glyph bug",
       "id": "concept_empty_glyph_bug"
     },
@@ -2506,7 +2556,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 10,
+      "community": 0,
       "norm_label": "phrase span (per-glyph tj+td chain)",
       "id": "concept_phrase_span"
     },
@@ -2558,7 +2608,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 10,
+      "community": 0,
       "norm_label": "handoff document",
       "id": "handoff_md"
     }
@@ -2580,9 +2630,9 @@
       "source_file": "benchmark/run_benchmark.py",
       "source_location": "L122",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "benchmark_run_benchmark",
-      "target": "benchmark_run_benchmark_clean_phrase_span",
-      "confidence_score": 1.0
+      "target": "benchmark_run_benchmark_clean_phrase_span"
     },
     {
       "relation": "contains",
@@ -2590,9 +2640,9 @@
       "source_file": "benchmark/run_benchmark.py",
       "source_location": "L90",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "benchmark_run_benchmark",
-      "target": "benchmark_run_benchmark_phrase_targets",
-      "confidence_score": 1.0
+      "target": "benchmark_run_benchmark_phrase_targets"
     },
     {
       "relation": "contains",
@@ -2600,9 +2650,9 @@
       "source_file": "benchmark/run_benchmark.py",
       "source_location": "L77",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "benchmark_run_benchmark",
-      "target": "benchmark_run_benchmark_phrase_variants",
-      "confidence_score": 1.0
+      "target": "benchmark_run_benchmark_phrase_variants"
     },
     {
       "relation": "contains",
@@ -2695,9 +2745,9 @@
       "source_file": "benchmark/run_benchmark.py",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "benchmark_run_benchmark",
-      "target": "pdfkit_edit_apply_phrase_correction",
-      "confidence_score": 1.0
+      "target": "pdfkit_edit_apply_phrase_correction"
     },
     {
       "relation": "imports",
@@ -2717,9 +2767,9 @@
       "source_file": "benchmark/run_benchmark.py",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "benchmark_run_benchmark",
-      "target": "pdfkit_edit_phrasespanerror",
-      "confidence_score": 1.0
+      "target": "pdfkit_edit_phrasespanerror"
     },
     {
       "relation": "imports_from",
@@ -2750,9 +2800,9 @@
       "source_file": "benchmark/run_benchmark.py",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "benchmark_run_benchmark",
-      "target": "pdfkit_verify_verify_phrase_correction",
-      "confidence_score": 1.0
+      "target": "pdfkit_verify_verify_phrase_correction"
     },
     {
       "relation": "rationale_for",
@@ -2770,9 +2820,9 @@
       "source_file": "benchmark/run_benchmark.py",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "benchmark_run_benchmark_rationale_30",
-      "target": "benchmark_run_benchmark_variants",
-      "confidence_score": 1.0
+      "target": "benchmark_run_benchmark_variants"
     },
     {
       "relation": "calls",
@@ -2791,9 +2841,9 @@
       "source_file": "benchmark/run_benchmark.py",
       "source_location": "L58",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "benchmark_run_benchmark_rationale_58",
-      "target": "benchmark_run_benchmark_word_variants",
-      "confidence_score": 1.0
+      "target": "benchmark_run_benchmark_word_variants"
     },
     {
       "relation": "calls",
@@ -2812,9 +2862,9 @@
       "source_file": "benchmark/run_benchmark.py",
       "source_location": "L78",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "benchmark_run_benchmark_rationale_78",
-      "target": "benchmark_run_benchmark_phrase_variants",
-      "confidence_score": 1.0
+      "target": "benchmark_run_benchmark_phrase_variants"
     },
     {
       "relation": "calls",
@@ -2823,9 +2873,9 @@
       "source_file": "benchmark/run_benchmark.py",
       "source_location": "L150",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "benchmark_run_benchmark_run",
-      "target": "benchmark_run_benchmark_phrase_variants",
-      "confidence_score": 1.0
+      "target": "benchmark_run_benchmark_phrase_variants"
     },
     {
       "relation": "references",
@@ -2834,9 +2884,9 @@
       "source_file": "benchmark/run_benchmark.py",
       "source_location": "L90",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "benchmark_run_benchmark_phrase_targets",
-      "target": "benchmark_run_benchmark_py_document",
-      "confidence_score": 1.0
+      "target": "benchmark_run_benchmark_py_document"
     },
     {
       "relation": "rationale_for",
@@ -2844,9 +2894,9 @@
       "source_file": "benchmark/run_benchmark.py",
       "source_location": "L91",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "benchmark_run_benchmark_rationale_91",
-      "target": "benchmark_run_benchmark_phrase_targets",
-      "confidence_score": 1.0
+      "target": "benchmark_run_benchmark_phrase_targets"
     },
     {
       "relation": "calls",
@@ -2855,9 +2905,9 @@
       "source_file": "benchmark/run_benchmark.py",
       "source_location": "L149",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "benchmark_run_benchmark_run",
-      "target": "benchmark_run_benchmark_phrase_targets",
-      "confidence_score": 1.0
+      "target": "benchmark_run_benchmark_phrase_targets"
     },
     {
       "relation": "references",
@@ -2866,9 +2916,9 @@
       "source_file": "benchmark/run_benchmark.py",
       "source_location": "L122",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "benchmark_run_benchmark_clean_phrase_span",
-      "target": "benchmark_run_benchmark_py_document",
-      "confidence_score": 1.0
+      "target": "benchmark_run_benchmark_py_document"
     },
     {
       "relation": "uses",
@@ -2876,9 +2926,9 @@
       "source_file": "benchmark/run_benchmark.py",
       "source_location": "L20",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "benchmark_run_benchmark_py_document",
-      "target": "pdfkit_document_document",
-      "confidence_score": 0.5
+      "target": "pdfkit_document_document"
     },
     {
       "relation": "uses",
@@ -2886,9 +2936,9 @@
       "source_file": "benchmark/run_benchmark.py",
       "source_location": "L21",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "benchmark_run_benchmark_py_document",
-      "target": "pdfkit_edit_fontunavailable",
-      "confidence_score": 0.5
+      "target": "pdfkit_edit_fontunavailable"
     },
     {
       "relation": "uses",
@@ -2896,9 +2946,9 @@
       "source_file": "benchmark/run_benchmark.py",
       "source_location": "L21",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "benchmark_run_benchmark_py_document",
-      "target": "pdfkit_edit_phrasespanerror",
-      "confidence_score": 0.5
+      "target": "pdfkit_edit_phrasespanerror"
     },
     {
       "relation": "calls",
@@ -2907,9 +2957,9 @@
       "source_file": "benchmark/run_benchmark.py",
       "source_location": "L134",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "benchmark_run_benchmark_run",
-      "target": "benchmark_run_benchmark_py_document",
-      "confidence_score": 1.0
+      "target": "benchmark_run_benchmark_py_document"
     },
     {
       "relation": "rationale_for",
@@ -2917,9 +2967,9 @@
       "source_file": "benchmark/run_benchmark.py",
       "source_location": "L123",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "benchmark_run_benchmark_rationale_123",
-      "target": "benchmark_run_benchmark_clean_phrase_span",
-      "confidence_score": 1.0
+      "target": "benchmark_run_benchmark_clean_phrase_span"
     },
     {
       "relation": "calls",
@@ -2928,9 +2978,9 @@
       "source_file": "benchmark/run_benchmark.py",
       "source_location": "L164",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "benchmark_run_benchmark_run",
-      "target": "benchmark_run_benchmark_clean_phrase_span",
-      "confidence_score": 1.0
+      "target": "benchmark_run_benchmark_clean_phrase_span"
     },
     {
       "relation": "calls",
@@ -2961,9 +3011,9 @@
       "source_file": "benchmark/run_benchmark.py",
       "source_location": "L167",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "benchmark_run_benchmark_run",
-      "target": "pdfkit_edit_apply_phrase_correction",
-      "confidence_score": 1.0
+      "target": "pdfkit_edit_apply_phrase_correction"
     },
     {
       "relation": "calls",
@@ -2983,9 +3033,9 @@
       "source_file": "benchmark/run_benchmark.py",
       "source_location": "L171",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "benchmark_run_benchmark_run",
-      "target": "pdfkit_verify_verify_phrase_correction",
-      "confidence_score": 1.0
+      "target": "pdfkit_verify_verify_phrase_correction"
     },
     {
       "relation": "rationale_for",
@@ -3013,9 +3063,9 @@
       "source_file": "pdfkit/cli.py",
       "source_location": "L128",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_cli",
-      "target": "pdfkit_cli_correct_phrase",
-      "confidence_score": 1.0
+      "target": "pdfkit_cli_correct_phrase"
     },
     {
       "relation": "contains",
@@ -3041,6 +3091,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "pdfkit/cli.py",
+      "source_location": "L138",
+      "weight": 1.0,
+      "source": "pdfkit_cli",
+      "target": "pdfkit_cli_print_repair_report",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pdfkit/cli.py",
       "source_location": "L116",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -3056,6 +3116,16 @@
       "confidence_score": 1.0,
       "source": "pdfkit_cli",
       "target": "pdfkit_cli_repair"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pdfkit/cli.py",
+      "source_location": "L115",
+      "weight": 1.0,
+      "source": "pdfkit_cli",
+      "target": "pdfkit_cli_repair_and_verify",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3128,9 +3198,9 @@
       "source_file": "pdfkit/cli.py",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_cli",
-      "target": "pdfkit_edit_apply_phrase_correction",
-      "confidence_score": 1.0
+      "target": "pdfkit_edit_apply_phrase_correction"
     },
     {
       "relation": "imports",
@@ -3161,9 +3231,9 @@
       "source_file": "pdfkit/cli.py",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_cli",
-      "target": "pdfkit_edit_phrasespanerror",
-      "confidence_score": 1.0
+      "target": "pdfkit_edit_phrasespanerror"
     },
     {
       "relation": "imports",
@@ -3238,9 +3308,9 @@
       "source_file": "pdfkit/cli.py",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_cli",
-      "target": "pdfkit_verify_verify_phrase_correction",
-      "confidence_score": 1.0
+      "target": "pdfkit_verify_verify_phrase_correction"
     },
     {
       "relation": "imports",
@@ -3291,9 +3361,9 @@
       "source_file": "pdfkit/cli.py",
       "source_location": "L158",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_cli_correct_phrase",
-      "target": "pdfkit_cli_default_out",
-      "confidence_score": 1.0
+      "target": "pdfkit_cli_default_out"
     },
     {
       "relation": "calls",
@@ -3345,9 +3415,9 @@
       "source_file": "pdfkit/cli.py",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_cli_rationale_25",
-      "target": "pdfkit_cli_inspect",
-      "confidence_score": 1.0
+      "target": "pdfkit_cli_inspect"
     },
     {
       "relation": "calls",
@@ -3356,8 +3426,19 @@
       "source_file": "pdfkit/cli.py",
       "source_location": "L61",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_cli_correct",
-      "target": "pdfkit_cli_correct_phrase",
+      "target": "pdfkit_cli_correct_phrase"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdfkit/cli.py",
+      "source_location": "L103",
+      "weight": 1.0,
+      "source": "pdfkit_cli_correct",
+      "target": "pdfkit_cli_print_repair_report",
       "confidence_score": 1.0
     },
     {
@@ -3370,6 +3451,17 @@
       "confidence_score": 1.0,
       "source": "pdfkit_cli_correct",
       "target": "pdfkit_cli_print_report"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdfkit/cli.py",
+      "source_location": "L100",
+      "weight": 1.0,
+      "source": "pdfkit_cli_correct",
+      "target": "pdfkit_cli_repair_and_verify",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -3443,9 +3535,9 @@
       "source_file": "pdfkit/cli.py",
       "source_location": "L52",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_cli_rationale_52",
-      "target": "pdfkit_cli_correct",
-      "confidence_score": 1.0
+      "target": "pdfkit_cli_correct"
     },
     {
       "relation": "calls",
@@ -3454,8 +3546,62 @@
       "source_file": "pdfkit/cli.py",
       "source_location": "L171",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_cli_correct_phrase",
-      "target": "pdfkit_cli_print_report",
+      "target": "pdfkit_cli_print_report"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdfkit/cli.py",
+      "source_location": "L205",
+      "weight": 1.0,
+      "source": "pdfkit_cli_correct_phrase",
+      "target": "pdfkit_cli_repair_and_verify",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "pdfkit/cli.py",
+      "source_location": "L116",
+      "weight": 1.0,
+      "source": "pdfkit_cli_rationale_116",
+      "target": "pdfkit_cli_repair_and_verify",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdfkit/cli.py",
+      "source_location": "L126",
+      "weight": 1.0,
+      "source": "pdfkit_cli_repair_and_verify",
+      "target": "pdfkit_edit_repair_fonts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdfkit/cli.py",
+      "source_location": "L129",
+      "weight": 1.0,
+      "source": "pdfkit_cli_repair_and_verify",
+      "target": "pdfkit_verify_verify_repair",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdfkit/cli.py",
+      "source_location": "L208",
+      "weight": 1.0,
+      "source": "pdfkit_cli_correct_phrase",
+      "target": "pdfkit_cli_print_repair_report",
       "confidence_score": 1.0
     },
     {
@@ -3465,9 +3611,9 @@
       "source_file": "pdfkit/cli.py",
       "source_location": "L163",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_cli_correct_phrase",
-      "target": "pdfkit_edit_apply_phrase_correction",
-      "confidence_score": 1.0
+      "target": "pdfkit_edit_apply_phrase_correction"
     },
     {
       "relation": "calls",
@@ -3476,9 +3622,9 @@
       "source_file": "pdfkit/cli.py",
       "source_location": "L178",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_cli_correct_phrase",
-      "target": "pdfkit_edit_repair_fonts",
-      "confidence_score": 1.0
+      "target": "pdfkit_edit_repair_fonts"
     },
     {
       "relation": "calls",
@@ -3498,9 +3644,9 @@
       "source_file": "pdfkit/cli.py",
       "source_location": "L170",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_cli_correct_phrase",
-      "target": "pdfkit_verify_verify_phrase_correction",
-      "confidence_score": 1.0
+      "target": "pdfkit_verify_verify_phrase_correction"
     },
     {
       "relation": "calls",
@@ -3509,17 +3655,17 @@
       "source_file": "pdfkit/cli.py",
       "source_location": "L181",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_cli_correct_phrase",
-      "target": "pdfkit_verify_verify_repair",
-      "confidence_score": 1.0
+      "target": "pdfkit_verify_verify_repair"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "pdfkit/cli.py",
-      "source_location": "L129",
+      "source_location": "L153",
       "weight": 1.0,
-      "source": "pdfkit_cli_rationale_129",
+      "source": "pdfkit_cli_rationale_153",
       "target": "pdfkit_cli_correct_phrase",
       "confidence_score": 1.0
     },
@@ -3527,19 +3673,9 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "pdfkit/cli.py",
-      "source_location": "L129",
+      "source_location": "L217",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "pdfkit_cli_rationale_129",
-      "target": "pdfkit_cli_repair"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "pdfkit/cli.py",
-      "source_location": "L200",
-      "weight": 1.0,
-      "source": "pdfkit_cli_rationale_200",
+      "source": "pdfkit_cli_rationale_217",
       "target": "pdfkit_cli_repair",
       "confidence_score": 1.0
     },
@@ -3591,9 +3727,9 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "pdfkit/cli.py",
-      "source_location": "L235",
+      "source_location": "L252",
       "weight": 1.0,
-      "source": "pdfkit_cli_rationale_235",
+      "source": "pdfkit_cli_rationale_252",
       "target": "pdfkit_cli_scrub_metadata_cmd",
       "confidence_score": 1.0
     },
@@ -3614,7 +3750,17 @@
       "source_file": "pdfkit/cli.py",
       "source_location": "L252",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_cli_rationale_252",
+      "target": "pdfkit_cli_verify"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "pdfkit/cli.py",
+      "source_location": "L269",
+      "weight": 1.0,
+      "source": "pdfkit_cli_rationale_269",
       "target": "pdfkit_cli_verify",
       "confidence_score": 1.0
     },
@@ -3988,9 +4134,9 @@
       "source_file": "pdfkit/edit.py",
       "source_location": "L17",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "pdfkit_edit_py_document",
-      "target": "pdfkit_document_fontmodel",
-      "confidence_score": 0.5
+      "target": "pdfkit_document_fontmodel"
     },
     {
       "relation": "uses",
@@ -4205,9 +4351,9 @@
       "source_file": "pdfkit/edit.py",
       "source_location": "L17",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "pdfkit_edit_py_document",
-      "target": "pdfkit_document_run",
-      "confidence_score": 0.5
+      "target": "pdfkit_document_run"
     },
     {
       "relation": "uses",
@@ -4615,9 +4761,9 @@
       "source_file": "pdfkit/edit.py",
       "source_location": "L17",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "pdfkit_edit_py_document",
-      "target": "pdfkit_document_document",
-      "confidence_score": 0.5
+      "target": "pdfkit_document_document"
     },
     {
       "relation": "uses",
@@ -4699,9 +4845,9 @@
       "source_file": "pdfkit/verify.py",
       "source_location": "L239",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_verify_verify_phrase_correction",
-      "target": "pdfkit_document_document",
-      "confidence_score": 1.0
+      "target": "pdfkit_document_document"
     },
     {
       "relation": "calls",
@@ -4785,9 +4931,9 @@
       "source_file": "tests/test_correction.py",
       "source_location": "L184",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_correction_test_phrase_length_change",
-      "target": "pdfkit_document_document",
-      "confidence_score": 1.0
+      "target": "pdfkit_document_document"
     },
     {
       "relation": "calls",
@@ -4796,9 +4942,9 @@
       "source_file": "tests/test_correction.py",
       "source_location": "L200",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_correction_test_phrase_negative_control",
-      "target": "pdfkit_document_document",
-      "confidence_score": 1.0
+      "target": "pdfkit_document_document"
     },
     {
       "relation": "calls",
@@ -4807,9 +4953,9 @@
       "source_file": "tests/test_correction.py",
       "source_location": "L163",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_correction_test_phrase_same_length_correction",
-      "target": "pdfkit_document_document",
-      "confidence_score": 1.0
+      "target": "pdfkit_document_document"
     },
     {
       "relation": "calls",
@@ -4868,9 +5014,9 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "pdfkit/document.py",
-      "source_location": "L230",
+      "source_location": "L233",
       "weight": 1.0,
-      "source": "pdfkit_document_rationale_230",
+      "source": "pdfkit_document_rationale_233",
       "target": "pdfkit_document_document_has_label",
       "confidence_score": 1.0
     },
@@ -5550,9 +5696,9 @@
       "source_file": "pdfkit/edit.py",
       "source_location": "L100",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_edit_resolve_original",
-      "target": "pdfkit_edit_py_document",
-      "confidence_score": 1.0
+      "target": "pdfkit_edit_py_document"
     },
     {
       "relation": "calls",
@@ -5571,9 +5717,9 @@
       "source_file": "pdfkit/edit.py",
       "source_location": "L244",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_edit_apply_correction",
-      "target": "pdfkit_edit_py_document",
-      "confidence_score": 1.0
+      "target": "pdfkit_edit_py_document"
     },
     {
       "relation": "references",
@@ -5582,9 +5728,9 @@
       "source_file": "pdfkit/edit.py",
       "source_location": "L299",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_edit_apply_phrase_correction",
-      "target": "pdfkit_edit_py_document",
-      "confidence_score": 1.0
+      "target": "pdfkit_edit_py_document"
     },
     {
       "relation": "references",
@@ -5593,9 +5739,9 @@
       "source_file": "pdfkit/edit.py",
       "source_location": "L375",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_edit_apply_phrase_multifont",
-      "target": "pdfkit_edit_py_document",
-      "confidence_score": 1.0
+      "target": "pdfkit_edit_py_document"
     },
     {
       "relation": "references",
@@ -5604,9 +5750,9 @@
       "source_file": "pdfkit/edit.py",
       "source_location": "L114",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_edit_extend_subset",
-      "target": "pdfkit_edit_py_document",
-      "confidence_score": 1.0
+      "target": "pdfkit_edit_py_document"
     },
     {
       "relation": "references",
@@ -5615,9 +5761,9 @@
       "source_file": "pdfkit/edit.py",
       "source_location": "L208",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_edit_find_blanks",
-      "target": "pdfkit_edit_py_document",
-      "confidence_score": 1.0
+      "target": "pdfkit_edit_py_document"
     },
     {
       "relation": "references",
@@ -5626,9 +5772,9 @@
       "source_file": "pdfkit/edit.py",
       "source_location": "L466",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_edit_infer_alignment",
-      "target": "pdfkit_edit_py_document",
-      "confidence_score": 1.0
+      "target": "pdfkit_edit_py_document"
     },
     {
       "relation": "references",
@@ -5637,9 +5783,9 @@
       "source_file": "pdfkit/edit.py",
       "source_location": "L150",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_edit_repair_fonts",
-      "target": "pdfkit_edit_py_document",
-      "confidence_score": 1.0
+      "target": "pdfkit_edit_py_document"
     },
     {
       "relation": "references",
@@ -6003,9 +6149,9 @@
       "source_file": "tests/test_correction.py",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_correction",
-      "target": "pdfkit_edit_phraseresult",
-      "confidence_score": 1.0
+      "target": "pdfkit_edit_phraseresult"
     },
     {
       "relation": "calls",
@@ -6014,9 +6160,9 @@
       "source_file": "tests/test_correction.py",
       "source_location": "L214",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_correction_test_phrase_negative_control",
-      "target": "pdfkit_edit_phraseresult",
-      "confidence_score": 1.0
+      "target": "pdfkit_edit_phraseresult"
     },
     {
       "relation": "conceptually_related_to",
@@ -6056,9 +6202,9 @@
       "source_file": "tests/test_correction.py",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_correction",
-      "target": "pdfkit_edit_apply_phrase_correction",
-      "confidence_score": 1.0
+      "target": "pdfkit_edit_apply_phrase_correction"
     },
     {
       "relation": "calls",
@@ -6067,9 +6213,9 @@
       "source_file": "tests/test_correction.py",
       "source_location": "L190",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_correction_test_phrase_length_change",
-      "target": "pdfkit_edit_apply_phrase_correction",
-      "confidence_score": 1.0
+      "target": "pdfkit_edit_apply_phrase_correction"
     },
     {
       "relation": "calls",
@@ -6078,9 +6224,9 @@
       "source_file": "tests/test_correction.py",
       "source_location": "L171",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_correction_test_phrase_same_length_correction",
-      "target": "pdfkit_edit_apply_phrase_correction",
-      "confidence_score": 1.0
+      "target": "pdfkit_edit_apply_phrase_correction"
     },
     {
       "relation": "rationale_for",
@@ -6088,9 +6234,9 @@
       "source_file": "pdfkit/edit.py",
       "source_location": "L376",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_edit_rationale_376",
-      "target": "pdfkit_edit_apply_phrase_multifont",
-      "confidence_score": 1.0
+      "target": "pdfkit_edit_apply_phrase_multifont"
     },
     {
       "relation": "rationale_for",
@@ -6098,9 +6244,9 @@
       "source_file": "pdfkit/edit.py",
       "source_location": "L467",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_edit_rationale_467",
-      "target": "pdfkit_edit_infer_alignment",
-      "confidence_score": 1.0
+      "target": "pdfkit_edit_infer_alignment"
     },
     {
       "relation": "contains",
@@ -6563,11 +6709,22 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "pdfkit/verify.py",
-      "source_location": "L330",
+      "source_location": "L333",
       "weight": 1.0,
-      "source": "pdfkit_verify_rep_phrase_visual",
+      "source": "pdfkit_verify_render_diff",
       "target": "pdfkit_render_render_page",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdfkit/verify.py",
+      "source_location": "L330",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pdfkit_verify_rep_phrase_visual",
+      "target": "pdfkit_render_render_page"
     },
     {
       "relation": "calls",
@@ -6629,11 +6786,22 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "pdfkit/verify.py",
-      "source_location": "L332",
+      "source_location": "L335",
       "weight": 1.0,
-      "source": "pdfkit_verify_rep_phrase_visual",
+      "source": "pdfkit_verify_render_diff",
       "target": "pdfkit_render_diff_images",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdfkit/verify.py",
+      "source_location": "L332",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pdfkit_verify_rep_phrase_visual",
+      "target": "pdfkit_render_diff_images"
     },
     {
       "relation": "calls",
@@ -6673,9 +6841,9 @@
       "source_file": "pdfkit/verify.py",
       "source_location": "L176",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_verify",
-      "target": "pdfkit_verify_common_prefix_len",
-      "confidence_score": 1.0
+      "target": "pdfkit_verify_common_prefix_len"
     },
     {
       "relation": "contains",
@@ -6683,9 +6851,9 @@
       "source_file": "pdfkit/verify.py",
       "source_location": "L183",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_verify",
-      "target": "pdfkit_verify_common_suffix_len",
-      "confidence_score": 1.0
+      "target": "pdfkit_verify_common_suffix_len"
     },
     {
       "relation": "contains",
@@ -6693,9 +6861,9 @@
       "source_file": "pdfkit/verify.py",
       "source_location": "L192",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_verify",
-      "target": "pdfkit_verify_diff_region",
-      "confidence_score": 1.0
+      "target": "pdfkit_verify_diff_region"
     },
     {
       "relation": "contains",
@@ -6713,9 +6881,9 @@
       "source_file": "pdfkit/verify.py",
       "source_location": "L283",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_verify",
-      "target": "pdfkit_verify_phrase_word_box",
-      "confidence_score": 1.0
+      "target": "pdfkit_verify_phrase_word_box"
     },
     {
       "relation": "contains",
@@ -6734,8 +6902,18 @@
       "source_location": "L329",
       "weight": 1.0,
       "source": "pdfkit_verify",
-      "target": "pdfkit_verify_rep_phrase_visual",
+      "target": "pdfkit_verify_render_diff",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pdfkit/verify.py",
+      "source_location": "L329",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pdfkit_verify",
+      "target": "pdfkit_verify_rep_phrase_visual"
     },
     {
       "relation": "contains",
@@ -6783,9 +6961,9 @@
       "source_file": "pdfkit/verify.py",
       "source_location": "L207",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_verify",
-      "target": "pdfkit_verify_verify_phrase_correction",
-      "confidence_score": 1.0
+      "target": "pdfkit_verify_verify_phrase_correction"
     },
     {
       "relation": "contains",
@@ -6833,9 +7011,9 @@
       "source_file": "pdfkit/verify.py",
       "source_location": "L369",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_verify",
-      "target": "pdfkit_verify_write_phrase_packet",
-      "confidence_score": 1.0
+      "target": "pdfkit_verify_write_phrase_packet"
     },
     {
       "relation": "rationale_for",
@@ -6887,9 +7065,9 @@
       "source_file": "pdfkit/verify.py",
       "source_location": "L207",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_verify_verify_phrase_correction",
-      "target": "pdfkit_verify_verifyreport",
-      "confidence_score": 1.0
+      "target": "pdfkit_verify_verifyreport"
     },
     {
       "relation": "references",
@@ -6940,9 +7118,9 @@
       "source_file": "pdfkit/verify.py",
       "source_location": "L369",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_verify_write_phrase_packet",
-      "target": "pdfkit_verify_verifyreport",
-      "confidence_score": 1.0
+      "target": "pdfkit_verify_verifyreport"
     },
     {
       "relation": "calls",
@@ -6951,9 +7129,9 @@
       "source_file": "pdfkit/verify.py",
       "source_location": "L361",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_verify_rep_phrase_visual",
-      "target": "pdfkit_verify_verifyreport_add",
-      "confidence_score": 1.0
+      "target": "pdfkit_verify_verifyreport_add"
     },
     {
       "relation": "calls",
@@ -6984,9 +7162,9 @@
       "source_file": "pdfkit/verify.py",
       "source_location": "L230",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_verify_verify_phrase_correction",
-      "target": "pdfkit_verify_verifyreport_add",
-      "confidence_score": 1.0
+      "target": "pdfkit_verify_verifyreport_add"
     },
     {
       "relation": "calls",
@@ -7027,9 +7205,9 @@
       "source_file": "pdfkit/verify.py",
       "source_location": "L215",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_verify_verify_phrase_correction",
-      "target": "pdfkit_verify_run_texts",
-      "confidence_score": 1.0
+      "target": "pdfkit_verify_run_texts"
     },
     {
       "relation": "calls",
@@ -7179,9 +7357,9 @@
       "source_file": "pdfkit/verify.py",
       "source_location": "L207",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_verify_verify_phrase_correction",
-      "target": "pdfkit_verify_py_path",
-      "confidence_score": 1.0
+      "target": "pdfkit_verify_py_path"
     },
     {
       "relation": "references",
@@ -7212,9 +7390,9 @@
       "source_file": "pdfkit/verify.py",
       "source_location": "L369",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_verify_write_phrase_packet",
-      "target": "pdfkit_verify_py_path",
-      "confidence_score": 1.0
+      "target": "pdfkit_verify_py_path"
     },
     {
       "relation": "calls",
@@ -7277,9 +7455,9 @@
       "source_file": "pdfkit/verify.py",
       "source_location": "L225",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_verify_verify_phrase_correction",
-      "target": "pdfkit_verify_common_prefix_len",
-      "confidence_score": 1.0
+      "target": "pdfkit_verify_common_prefix_len"
     },
     {
       "relation": "rationale_for",
@@ -7287,9 +7465,9 @@
       "source_file": "pdfkit/verify.py",
       "source_location": "L184",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_verify_rationale_184",
-      "target": "pdfkit_verify_common_suffix_len",
-      "confidence_score": 1.0
+      "target": "pdfkit_verify_common_suffix_len"
     },
     {
       "relation": "calls",
@@ -7298,9 +7476,9 @@
       "source_file": "pdfkit/verify.py",
       "source_location": "L226",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_verify_verify_phrase_correction",
-      "target": "pdfkit_verify_common_suffix_len",
-      "confidence_score": 1.0
+      "target": "pdfkit_verify_common_suffix_len"
     },
     {
       "relation": "rationale_for",
@@ -7308,9 +7486,9 @@
       "source_file": "pdfkit/verify.py",
       "source_location": "L193",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_verify_rationale_193",
-      "target": "pdfkit_verify_diff_region",
-      "confidence_score": 1.0
+      "target": "pdfkit_verify_diff_region"
     },
     {
       "relation": "calls",
@@ -7319,9 +7497,9 @@
       "source_file": "pdfkit/verify.py",
       "source_location": "L222",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_verify_verify_phrase_correction",
-      "target": "pdfkit_verify_diff_region",
-      "confidence_score": 1.0
+      "target": "pdfkit_verify_diff_region"
     },
     {
       "relation": "rationale_for",
@@ -7329,9 +7507,9 @@
       "source_file": "pdfkit/verify.py",
       "source_location": "L210",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_verify_rationale_210",
-      "target": "pdfkit_verify_verify_phrase_correction",
-      "confidence_score": 1.0
+      "target": "pdfkit_verify_verify_phrase_correction"
     },
     {
       "relation": "calls",
@@ -7340,9 +7518,9 @@
       "source_file": "pdfkit/verify.py",
       "source_location": "L272",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_verify_verify_phrase_correction",
-      "target": "pdfkit_verify_provenance_check",
-      "confidence_score": 1.0
+      "target": "pdfkit_verify_provenance_check"
     },
     {
       "relation": "calls",
@@ -7351,9 +7529,9 @@
       "source_file": "pdfkit/verify.py",
       "source_location": "L276",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_verify_verify_phrase_correction",
-      "target": "pdfkit_verify_rep_phrase_visual",
-      "confidence_score": 1.0
+      "target": "pdfkit_verify_rep_phrase_visual"
     },
     {
       "relation": "calls",
@@ -7362,9 +7540,9 @@
       "source_file": "pdfkit/verify.py",
       "source_location": "L269",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_verify_verify_phrase_correction",
-      "target": "pdfkit_verify_structure_invariants",
-      "confidence_score": 1.0
+      "target": "pdfkit_verify_structure_invariants"
     },
     {
       "relation": "calls",
@@ -7373,9 +7551,9 @@
       "source_file": "pdfkit/verify.py",
       "source_location": "L279",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_verify_verify_phrase_correction",
-      "target": "pdfkit_verify_write_phrase_packet",
-      "confidence_score": 1.0
+      "target": "pdfkit_verify_write_phrase_packet"
     },
     {
       "relation": "imports",
@@ -7384,9 +7562,9 @@
       "source_file": "tests/test_correction.py",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_correction",
-      "target": "pdfkit_verify_verify_phrase_correction",
-      "confidence_score": 1.0
+      "target": "pdfkit_verify_verify_phrase_correction"
     },
     {
       "relation": "calls",
@@ -7395,9 +7573,9 @@
       "source_file": "tests/test_correction.py",
       "source_location": "L193",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_correction_test_phrase_length_change",
-      "target": "pdfkit_verify_verify_phrase_correction",
-      "confidence_score": 1.0
+      "target": "pdfkit_verify_verify_phrase_correction"
     },
     {
       "relation": "calls",
@@ -7406,9 +7584,9 @@
       "source_file": "tests/test_correction.py",
       "source_location": "L216",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_correction_test_phrase_negative_control",
-      "target": "pdfkit_verify_verify_phrase_correction",
-      "confidence_score": 1.0
+      "target": "pdfkit_verify_verify_phrase_correction"
     },
     {
       "relation": "calls",
@@ -7417,9 +7595,9 @@
       "source_file": "tests/test_correction.py",
       "source_location": "L174",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_correction_test_phrase_same_length_correction",
-      "target": "pdfkit_verify_verify_phrase_correction",
-      "confidence_score": 1.0
+      "target": "pdfkit_verify_verify_phrase_correction"
     },
     {
       "relation": "rationale_for",
@@ -7427,9 +7605,9 @@
       "source_file": "pdfkit/verify.py",
       "source_location": "L284",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_verify_rationale_284",
-      "target": "pdfkit_verify_phrase_word_box",
-      "confidence_score": 1.0
+      "target": "pdfkit_verify_phrase_word_box"
     },
     {
       "relation": "calls",
@@ -7438,17 +7616,49 @@
       "source_file": "pdfkit/verify.py",
       "source_location": "L333",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_verify_rep_phrase_visual",
-      "target": "pdfkit_verify_phrase_word_box",
+      "target": "pdfkit_verify_phrase_word_box"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "pdfkit/verify.py",
+      "source_location": "L330",
+      "weight": 1.0,
+      "source": "pdfkit_verify_rationale_330",
+      "target": "pdfkit_verify_render_diff",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdfkit/verify.py",
+      "source_location": "L345",
+      "weight": 1.0,
+      "source": "pdfkit_verify_rep_phrase_visual",
+      "target": "pdfkit_verify_render_diff",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdfkit/verify.py",
+      "source_location": "L450",
+      "weight": 1.0,
+      "source": "pdfkit_verify_rep_visual",
+      "target": "pdfkit_verify_render_diff",
       "confidence_score": 1.0
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "pdfkit/verify.py",
-      "source_location": "L426",
+      "source_location": "L434",
       "weight": 1.0,
-      "source": "pdfkit_verify_rationale_426",
+      "source": "pdfkit_verify_rationale_434",
       "target": "pdfkit_verify_word_boxes",
       "confidence_score": 1.0
     },
@@ -7489,9 +7699,9 @@
       "source_file": "tests/test_correction.py",
       "source_location": "L127",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_correction",
-      "target": "tests_test_correction_find_phrase_word",
-      "confidence_score": 1.0
+      "target": "tests_test_correction_find_phrase_word"
     },
     {
       "relation": "contains",
@@ -7569,9 +7779,9 @@
       "source_file": "tests/test_correction.py",
       "source_location": "L181",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_correction",
-      "target": "tests_test_correction_test_phrase_length_change",
-      "confidence_score": 1.0
+      "target": "tests_test_correction_test_phrase_length_change"
     },
     {
       "relation": "contains",
@@ -7579,9 +7789,9 @@
       "source_file": "tests/test_correction.py",
       "source_location": "L197",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_correction",
-      "target": "tests_test_correction_test_phrase_negative_control",
-      "confidence_score": 1.0
+      "target": "tests_test_correction_test_phrase_negative_control"
     },
     {
       "relation": "contains",
@@ -7589,9 +7799,9 @@
       "source_file": "tests/test_correction.py",
       "source_location": "L160",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_correction",
-      "target": "tests_test_correction_test_phrase_same_length_correction",
-      "confidence_score": 1.0
+      "target": "tests_test_correction_test_phrase_same_length_correction"
     },
     {
       "relation": "contains",
@@ -7609,9 +7819,9 @@
       "source_file": "tests/test_correction.py",
       "source_location": "L152",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_correction",
-      "target": "tests_test_correction_transpose",
-      "confidence_score": 1.0
+      "target": "tests_test_correction_transpose"
     },
     {
       "relation": "rationale_for",
@@ -7684,9 +7894,9 @@
       "source_file": "tests/test_correction.py",
       "source_location": "L49",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_correction_rationale_49",
-      "target": "tests_test_correction_test_empty_glyph_repair_regression",
-      "confidence_score": 1.0
+      "target": "tests_test_correction_test_empty_glyph_repair_regression"
     },
     {
       "relation": "rationale_for",
@@ -7694,9 +7904,9 @@
       "source_file": "tests/test_correction.py",
       "source_location": "L81",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_correction_rationale_81",
-      "target": "tests_test_correction_test_negative_control_blank_glyph_rejected",
-      "confidence_score": 1.0
+      "target": "tests_test_correction_test_negative_control_blank_glyph_rejected"
     },
     {
       "relation": "rationale_for",
@@ -7704,9 +7914,9 @@
       "source_file": "tests/test_correction.py",
       "source_location": "L108",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_correction_rationale_108",
-      "target": "tests_test_correction_test_repair_fills_blank_glyphs_doc_wide",
-      "confidence_score": 1.0
+      "target": "tests_test_correction_test_repair_fills_blank_glyphs_doc_wide"
     },
     {
       "relation": "rationale_for",
@@ -7714,9 +7924,9 @@
       "source_file": "tests/test_correction.py",
       "source_location": "L128",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_correction_rationale_128",
-      "target": "tests_test_correction_find_phrase_word",
-      "confidence_score": 1.0
+      "target": "tests_test_correction_find_phrase_word"
     },
     {
       "relation": "calls",
@@ -7725,9 +7935,9 @@
       "source_file": "tests/test_correction.py",
       "source_location": "L185",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_correction_test_phrase_length_change",
-      "target": "tests_test_correction_find_phrase_word",
-      "confidence_score": 1.0
+      "target": "tests_test_correction_find_phrase_word"
     },
     {
       "relation": "calls",
@@ -7736,9 +7946,9 @@
       "source_file": "tests/test_correction.py",
       "source_location": "L201",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_correction_test_phrase_negative_control",
-      "target": "tests_test_correction_find_phrase_word",
-      "confidence_score": 1.0
+      "target": "tests_test_correction_find_phrase_word"
     },
     {
       "relation": "calls",
@@ -7747,9 +7957,9 @@
       "source_file": "tests/test_correction.py",
       "source_location": "L164",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_correction_test_phrase_same_length_correction",
-      "target": "tests_test_correction_find_phrase_word",
-      "confidence_score": 1.0
+      "target": "tests_test_correction_find_phrase_word"
     },
     {
       "relation": "rationale_for",
@@ -7757,9 +7967,9 @@
       "source_file": "tests/test_correction.py",
       "source_location": "L153",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_correction_rationale_153",
-      "target": "tests_test_correction_transpose",
-      "confidence_score": 1.0
+      "target": "tests_test_correction_transpose"
     },
     {
       "relation": "calls",
@@ -7768,9 +7978,9 @@
       "source_file": "tests/test_correction.py",
       "source_location": "L205",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_correction_test_phrase_negative_control",
-      "target": "tests_test_correction_transpose",
-      "confidence_score": 1.0
+      "target": "tests_test_correction_transpose"
     },
     {
       "relation": "calls",
@@ -7779,9 +7989,9 @@
       "source_file": "tests/test_correction.py",
       "source_location": "L168",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_correction_test_phrase_same_length_correction",
-      "target": "tests_test_correction_transpose",
-      "confidence_score": 1.0
+      "target": "tests_test_correction_transpose"
     },
     {
       "relation": "rationale_for",
@@ -7789,9 +7999,9 @@
       "source_file": "tests/test_correction.py",
       "source_location": "L161",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_correction_rationale_161",
-      "target": "tests_test_correction_test_phrase_same_length_correction",
-      "confidence_score": 1.0
+      "target": "tests_test_correction_test_phrase_same_length_correction"
     },
     {
       "relation": "rationale_for",
@@ -7799,9 +8009,9 @@
       "source_file": "tests/test_correction.py",
       "source_location": "L182",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_correction_rationale_182",
-      "target": "tests_test_correction_test_phrase_length_change",
-      "confidence_score": 1.0
+      "target": "tests_test_correction_test_phrase_length_change"
     },
     {
       "relation": "rationale_for",
@@ -7809,9 +8019,9 @@
       "source_file": "tests/test_correction.py",
       "source_location": "L198",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_correction_rationale_198",
-      "target": "tests_test_correction_test_phrase_negative_control",
-      "confidence_score": 1.0
+      "target": "tests_test_correction_test_phrase_negative_control"
     },
     {
       "relation": "contains",
@@ -7819,9 +8029,9 @@
       "source_file": "BENCHMARK.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "benchmark",
-      "target": "benchmark_acceptance_benchmark",
-      "confidence_score": 1.0
+      "target": "benchmark_acceptance_benchmark"
     },
     {
       "relation": "contains",
@@ -7829,9 +8039,9 @@
       "source_file": "BENCHMARK.md",
       "source_location": "L59",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "benchmark_acceptance_benchmark",
-      "target": "benchmark_known_limitations_honest",
-      "confidence_score": 1.0
+      "target": "benchmark_known_limitations_honest"
     },
     {
       "relation": "contains",
@@ -7839,9 +8049,9 @@
       "source_file": "BENCHMARK.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "benchmark_acceptance_benchmark",
-      "target": "benchmark_method",
-      "confidence_score": 1.0
+      "target": "benchmark_method"
     },
     {
       "relation": "contains",
@@ -7849,9 +8059,9 @@
       "source_file": "BENCHMARK.md",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "benchmark_acceptance_benchmark",
-      "target": "benchmark_result",
-      "confidence_score": 1.0
+      "target": "benchmark_result"
     },
     {
       "relation": "contains",
@@ -7859,9 +8069,9 @@
       "source_file": "BENCHMARK.md",
       "source_location": "L46",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "benchmark_acceptance_benchmark",
-      "target": "benchmark_why_100_is_trustworthy_not_trivial",
-      "confidence_score": 1.0
+      "target": "benchmark_why_100_is_trustworthy_not_trivial"
     },
     {
       "relation": "contains",
@@ -7869,9 +8079,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude",
-      "target": "claude_claude_md",
-      "confidence_score": 1.0
+      "target": "claude_claude_md"
     },
     {
       "relation": "contains",
@@ -7879,9 +8089,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L73",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_claude_md",
-      "target": "claude_architecture_the_read_correct_verify_pipeline",
-      "confidence_score": 1.0
+      "target": "claude_architecture_the_read_correct_verify_pipeline"
     },
     {
       "relation": "contains",
@@ -7889,9 +8099,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_claude_md",
-      "target": "claude_commands",
-      "confidence_score": 1.0
+      "target": "claude_commands"
     },
     {
       "relation": "contains",
@@ -7899,9 +8109,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L127",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_claude_md",
-      "target": "claude_conventions_specific_to_this_repo",
-      "confidence_score": 1.0
+      "target": "claude_conventions_specific_to_this_repo"
     },
     {
       "relation": "contains",
@@ -7909,9 +8119,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L59",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_claude_md",
-      "target": "claude_fixtures_fonts_and_why_tests_skip",
-      "confidence_score": 1.0
+      "target": "claude_fixtures_fonts_and_why_tests_skip"
     },
     {
       "relation": "contains",
@@ -7919,9 +8129,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L137",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_claude_md",
-      "target": "claude_graphify",
-      "confidence_score": 1.0
+      "target": "claude_graphify"
     },
     {
       "relation": "contains",
@@ -7929,9 +8139,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_claude_md",
-      "target": "claude_what_this_is",
-      "confidence_score": 1.0
+      "target": "claude_what_this_is"
     },
     {
       "relation": "contains",
@@ -7939,9 +8149,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L44",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_commands",
-      "target": "claude_running_the_tool",
-      "confidence_score": 1.0
+      "target": "claude_running_the_tool"
     },
     {
       "relation": "contains",
@@ -7949,9 +8159,9 @@
       "source_file": "CONTEXT.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "context",
-      "target": "context_pdfkit",
-      "confidence_score": 1.0
+      "target": "context_pdfkit"
     },
     {
       "relation": "contains",
@@ -7959,9 +8169,9 @@
       "source_file": "CONTEXT.md",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "context_pdfkit",
-      "target": "context_language",
-      "confidence_score": 1.0
+      "target": "context_language"
     },
     {
       "relation": "references",
@@ -7969,9 +8179,9 @@
       "source_file": "README.md",
       "source_location": "L26",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme",
-      "target": "fonts_readme",
-      "confidence_score": 1.0
+      "target": "fonts_readme"
     },
     {
       "relation": "contains",
@@ -7979,9 +8189,9 @@
       "source_file": "README.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme",
-      "target": "readme_pdfkit",
-      "confidence_score": 1.0
+      "target": "readme_pdfkit"
     },
     {
       "relation": "references",
@@ -8009,9 +8219,9 @@
       "source_file": "README.md",
       "source_location": "L62",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_pdfkit",
-      "target": "readme_how_it_works",
-      "confidence_score": 1.0
+      "target": "readme_how_it_works"
     },
     {
       "relation": "contains",
@@ -8019,9 +8229,9 @@
       "source_file": "README.md",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_pdfkit",
-      "target": "readme_install",
-      "confidence_score": 1.0
+      "target": "readme_install"
     },
     {
       "relation": "contains",
@@ -8029,9 +8239,9 @@
       "source_file": "README.md",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_pdfkit",
-      "target": "readme_use",
-      "confidence_score": 1.0
+      "target": "readme_use"
     },
     {
       "relation": "contains",
@@ -8039,9 +8249,9 @@
       "source_file": "README.md",
       "source_location": "L81",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_pdfkit",
-      "target": "readme_verification_confidence",
-      "confidence_score": 1.0
+      "target": "readme_verification_confidence"
     },
     {
       "relation": "contains",
@@ -8049,9 +8259,9 @@
       "source_file": "docs/adr/0001-text-layer-extraction-not-computer-vision.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "adr_0001_text_layer_extraction_not_computer_vision",
-      "target": "adr_0001_text_layer_extraction_not_computer_vision_use_text_layer_extraction_not_computer_vision_to_read_documents",
-      "confidence_score": 1.0
+      "target": "adr_0001_text_layer_extraction_not_computer_vision_use_text_layer_extraction_not_computer_vision_to_read_documents"
     },
     {
       "relation": "contains",
@@ -8059,9 +8269,9 @@
       "source_file": "docs/adr/0002-extend-font-subset-not-reembed-full-font.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "adr_0002_extend_font_subset_not_reembed_full_font",
-      "target": "adr_0002_extend_font_subset_not_reembed_full_font_extend_the_embedded_font_subset_on_demand_not_re_embed_the_full_font",
-      "confidence_score": 1.0
+      "target": "adr_0002_extend_font_subset_not_reembed_full_font_extend_the_embedded_font_subset_on_demand_not_re_embed_the_full_font"
     },
     {
       "relation": "contains",
@@ -8069,9 +8279,9 @@
       "source_file": "fonts/README.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "fonts_readme",
-      "target": "fonts_readme_original_font_programs_user_supplied",
-      "confidence_score": 1.0
+      "target": "fonts_readme_original_font_programs_user_supplied"
     },
     {
       "relation": "contains",
@@ -8079,9 +8289,9 @@
       "source_file": "pdfkit-handoff-20260620-222149.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_handoff_20260620_222149",
-      "target": "pdfkit_handoff_20260620_222149_handoff_pdfkit_verifiable_in_place_pdf_text_correction",
-      "confidence_score": 1.0
+      "target": "pdfkit_handoff_20260620_222149_handoff_pdfkit_verifiable_in_place_pdf_text_correction"
     },
     {
       "relation": "contains",
@@ -8089,9 +8299,9 @@
       "source_file": "pdfkit-handoff-20260620-222149.md",
       "source_location": "L89",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_handoff_20260620_222149_handoff_pdfkit_verifiable_in_place_pdf_text_correction",
-      "target": "pdfkit_handoff_20260620_222149_artifacts_to_reference_do_not_duplicate",
-      "confidence_score": 1.0
+      "target": "pdfkit_handoff_20260620_222149_artifacts_to_reference_do_not_duplicate"
     },
     {
       "relation": "contains",
@@ -8099,9 +8309,9 @@
       "source_file": "pdfkit-handoff-20260620-222149.md",
       "source_location": "L76",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_handoff_20260620_222149_handoff_pdfkit_verifiable_in_place_pdf_text_correction",
-      "target": "pdfkit_handoff_20260620_222149_constraints_rules_from_the_user_s_global_claude_md_this_project",
-      "confidence_score": 1.0
+      "target": "pdfkit_handoff_20260620_222149_constraints_rules_from_the_user_s_global_claude_md_this_project"
     },
     {
       "relation": "contains",
@@ -8109,9 +8319,9 @@
       "source_file": "pdfkit-handoff-20260620-222149.md",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_handoff_20260620_222149_handoff_pdfkit_verifiable_in_place_pdf_text_correction",
-      "target": "pdfkit_handoff_20260620_222149_current_state_done",
-      "confidence_score": 1.0
+      "target": "pdfkit_handoff_20260620_222149_current_state_done"
     },
     {
       "relation": "contains",
@@ -8119,9 +8329,9 @@
       "source_file": "pdfkit-handoff-20260620-222149.md",
       "source_location": "L57",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_handoff_20260620_222149_handoff_pdfkit_verifiable_in_place_pdf_text_correction",
-      "target": "pdfkit_handoff_20260620_222149_key_technical_context_gotchas",
-      "confidence_score": 1.0
+      "target": "pdfkit_handoff_20260620_222149_key_technical_context_gotchas"
     },
     {
       "relation": "contains",
@@ -8129,9 +8339,9 @@
       "source_file": "pdfkit-handoff-20260620-222149.md",
       "source_location": "L38",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_handoff_20260620_222149_handoff_pdfkit_verifiable_in_place_pdf_text_correction",
-      "target": "pdfkit_handoff_20260620_222149_pending_work_likely_next_focus",
-      "confidence_score": 1.0
+      "target": "pdfkit_handoff_20260620_222149_pending_work_likely_next_focus"
     },
     {
       "relation": "contains",
@@ -8139,9 +8349,9 @@
       "source_file": "pdfkit-handoff-20260620-222149.md",
       "source_location": "L116",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_handoff_20260620_222149_handoff_pdfkit_verifiable_in_place_pdf_text_correction",
-      "target": "pdfkit_handoff_20260620_222149_redaction_note",
-      "confidence_score": 1.0
+      "target": "pdfkit_handoff_20260620_222149_redaction_note"
     },
     {
       "relation": "contains",
@@ -8149,9 +8359,9 @@
       "source_file": "pdfkit-handoff-20260620-222149.md",
       "source_location": "L107",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_handoff_20260620_222149_handoff_pdfkit_verifiable_in_place_pdf_text_correction",
-      "target": "pdfkit_handoff_20260620_222149_suggested_skills",
-      "confidence_score": 1.0
+      "target": "pdfkit_handoff_20260620_222149_suggested_skills"
     },
     {
       "relation": "contains",
@@ -8159,9 +8369,9 @@
       "source_file": "pdfkit-handoff-20260620-222149.md",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_handoff_20260620_222149_handoff_pdfkit_verifiable_in_place_pdf_text_correction",
-      "target": "pdfkit_handoff_20260620_222149_two_directories_read_this_first_most_important_context",
-      "confidence_score": 1.0
+      "target": "pdfkit_handoff_20260620_222149_two_directories_read_this_first_most_important_context"
     },
     {
       "relation": "contains",
@@ -8169,9 +8379,9 @@
       "source_file": "pdfkit-handoff-20260620-222149.md",
       "source_location": "L97",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pdfkit_handoff_20260620_222149_handoff_pdfkit_verifiable_in_place_pdf_text_correction",
-      "target": "pdfkit_handoff_20260620_222149_verification_run_from_the_original_folder_where_the_venv_fixture_live",
-      "confidence_score": 1.0
+      "target": "pdfkit_handoff_20260620_222149_verification_run_from_the_original_folder_where_the_venv_fixture_live"
     },
     {
       "relation": "calls",

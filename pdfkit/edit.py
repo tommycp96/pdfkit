@@ -265,9 +265,16 @@ def apply_correction(doc: Document, run: Run, new_text: str,
 
     instrs = pikepdf.parse_content_stream(page)
     new_raw = model.encode(new_text)
-    instrs[run.instr_index] = pikepdf.ContentStreamInstruction(
-        [pikepdf.String(new_raw)], pikepdf.Operator("Tj")
-    )
+    if str(instrs[run.instr_index].operator) == "TJ":
+        # ponytail: re-emit TJ as a single string; preserve interior kerning
+        # numbers only if a real fixture needs it.
+        instrs[run.instr_index] = pikepdf.ContentStreamInstruction(
+            [pikepdf.Array([pikepdf.String(new_raw)])], pikepdf.Operator("TJ")
+        )
+    else:
+        instrs[run.instr_index] = pikepdf.ContentStreamInstruction(
+            [pikepdf.String(new_raw)], pikepdf.Operator("Tj")
+        )
     if dx:
         # Insert a relative Td before this Tj's preceding Td by adjusting the
         # nearest preceding Td operand on x.
@@ -455,10 +462,19 @@ def _apply_phrase_multifont(doc: Document, span: list, new_text: str) -> PhraseR
 
 
 def _shift_preceding_td(instrs, tj_index: int, dx: float) -> None:
+    """Shift the run's horizontal origin by dx to preserve a right edge. Prefers
+    the nearest preceding Td/TD (relative positioning); falls back to the Tm
+    matrix x-component (operand 4) for absolutely-positioned text (TJ tokens)."""
     for i in range(tj_index, -1, -1):
-        if str(instrs[i].operator) in ("Td", "TD"):
+        op = str(instrs[i].operator)
+        if op in ("Td", "TD"):
             ops = list(instrs[i].operands)
             ops[0] = pikepdf.Object.parse(str(float(ops[0]) + dx).encode())
+            instrs[i] = pikepdf.ContentStreamInstruction(ops, instrs[i].operator)
+            return
+        if op == "Tm":
+            ops = list(instrs[i].operands)
+            ops[4] = pikepdf.Object.parse(str(float(ops[4]) + dx).encode())
             instrs[i] = pikepdf.ContentStreamInstruction(ops, instrs[i].operator)
             return
 

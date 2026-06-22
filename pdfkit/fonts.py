@@ -22,6 +22,13 @@ _BFCHAR = re.compile(r"beginbfchar(.*?)endbfchar", re.S)
 _BFRANGE = re.compile(r"beginbfrange(.*?)endbfrange", re.S)
 _PAIR = re.compile(r"<([0-9A-Fa-f]+)>\s*<([0-9A-Fa-f]+)>")
 _TRIPLE = re.compile(r"<([0-9A-Fa-f]+)>\s*<([0-9A-Fa-f]+)>\s*<([0-9A-Fa-f]+)>")
+# Array-form bfrange: <lo> <hi> [ <v0> <v1> ... ] (one dest per code in lo..hi).
+_RANGE_ARRAY = re.compile(r"<([0-9A-Fa-f]+)>\s*<([0-9A-Fa-f]+)>\s*\[([^\]]*)\]", re.S)
+_HEX = re.compile(r"<([0-9A-Fa-f]+)>")
+
+
+def _decode_hex(dst: str) -> str:
+    return bytes.fromhex(_pad(dst)).decode("utf-16-be")
 
 
 def parse_tounicode(stream_bytes: bytes) -> dict[int, str]:
@@ -29,9 +36,19 @@ def parse_tounicode(stream_bytes: bytes) -> dict[int, str]:
     mapping: dict[int, str] = {}
     for block in _BFCHAR.findall(text):
         for src, dst in _PAIR.findall(block):
-            mapping[int(src, 16)] = bytes.fromhex(_pad(dst)).decode("utf-16-be")
+            mapping[int(src, 16)] = _decode_hex(dst)
     for block in _BFRANGE.findall(text):
-        for lo, hi, dst in _TRIPLE.findall(block):
+        # Array form first; then blank out what it consumed so the incremental
+        # triple form below can't greedily match values inside a [ ... ] list.
+        chars = list(block)
+        for m in _RANGE_ARRAY.finditer(block):
+            lo, hi, body = m.group(1), m.group(2), m.group(3)
+            dests = _HEX.findall(body)
+            for i, gid in enumerate(range(int(lo, 16), int(hi, 16) + 1)):
+                if i < len(dests):
+                    mapping[gid] = _decode_hex(dests[i])
+            chars[m.start():m.end()] = " " * (m.end() - m.start())
+        for lo, hi, dst in _TRIPLE.findall("".join(chars)):
             base = int(dst, 16)
             for i, gid in enumerate(range(int(lo, 16), int(hi, 16) + 1)):
                 mapping[gid] = chr(base + i)

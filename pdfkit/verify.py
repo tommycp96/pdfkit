@@ -158,8 +158,12 @@ def verify_repair(before_path: str, after_path: str,
             packet_dir.mkdir(parents=True, exist_ok=True)
             render_page(after_path, pi).save(packet_dir / f"after_p{pi}.png")
             dr.diff_image.save(packet_dir / f"diff_p{pi}.png")
-    rep.add("visual_repaired", True, total_changed > 0,
-            f"changed px per page: {per_page}")
+    # Adding ink is success; but a doc with no repairable blanks correctly fills
+    # nothing — "nothing to repair" is a pass, not a failure (mirrors the
+    # standalone `repair` command's not-res.filled handling).
+    rep.add("visual_repaired", True, total_changed > 0 or not filled,
+            f"changed px per page: {per_page}"
+            + ("" if filled else " (no blanks to repair)"))
 
     if packet_dir:
         packet_dir.mkdir(parents=True, exist_ok=True)
@@ -434,6 +438,9 @@ def _word_boxes(path: str, page_index: int, text: str) -> list[tuple[float, floa
     """Image-px bboxes for `text` on a page. Prefer exact words; fall back to any
     word that contains `text` (pdfplumber sometimes merges adjacent tokens)."""
     import pdfplumber
+    # pdfplumber's extract_words yields no surrounding whitespace, so match on the
+    # visible token (a leading/trailing space in `text` carries no ink/box).
+    text = text.strip()
     exact, contains = [], []
     with pdfplumber.open(path) as pdf:
         page = pdf.pages[page_index]

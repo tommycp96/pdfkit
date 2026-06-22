@@ -55,6 +55,14 @@ def correct(
     old, new = replace.split("=", 1)
     d = Document(pdf)
     matches = d.find(old, page=page, near=near)
+    if not d.runs:
+        # No extractable text at all: a scanned/image PDF, or a show-text
+        # operator pdfkit can't read yet. Say so plainly rather than implying
+        # the target string is simply absent.
+        typer.echo("error: this PDF has no extractable text runs — it is either "
+                   "scanned/image-only (out of scope) or uses a show-text "
+                   "operator pdfkit cannot read yet.", err=True)
+        d.close(); raise typer.Exit(1)
     # Auto-fallback: when OLD isn't a single run (per-glyph PDFs draw one glyph
     # per Tj), correct the consecutive run span instead. --phrase forces it.
     if phrase or not matches:

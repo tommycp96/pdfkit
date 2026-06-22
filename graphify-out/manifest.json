@@ -10,24 +10,24 @@
     "semantic_hash": "b0bd361fd1dbb23200fab51897965665"
   },
   "pdfkit/cli.py": {
-    "mtime": 1782048769.649834,
-    "ast_hash": "55e32176b42b026a6098fbe3e00217c3",
+    "mtime": 1782053186.1046875,
+    "ast_hash": "dcde05faece8727a8690e0bbc51399b8",
     "semantic_hash": ""
   },
   "pdfkit/document.py": {
-    "mtime": 1782048777.6224918,
-    "ast_hash": "e22e96f358a1cbcb4df345b6a711eaa7",
+    "mtime": 1782053186.1053839,
+    "ast_hash": "bb03fdf0d7c43006381734d50c31f82f",
     "semantic_hash": ""
   },
   "pdfkit/edit.py": {
-    "mtime": 1782032862.8123753,
-    "ast_hash": "8e8ec0a6957454cfeafcdbadba3c99be",
+    "mtime": 1782053186.1060746,
+    "ast_hash": "90651828c68460baef0c12c0ee1e8332",
     "semantic_hash": ""
   },
   "pdfkit/fonts.py": {
-    "mtime": 1781367104.4566576,
-    "ast_hash": "0f94148282fdfdd7e5e2ed839b3ec125",
-    "semantic_hash": "0f94148282fdfdd7e5e2ed839b3ec125"
+    "mtime": 1782053186.1071072,
+    "ast_hash": "72e7bc75dd5adcbf45ce27ea4503e5ca",
+    "semantic_hash": ""
   },
   "pdfkit/metadata.py": {
     "mtime": 1781367104.4571264,
@@ -40,8 +40,8 @@
     "semantic_hash": "7b54e43e6bb74aadc8f049df81cf6ebb"
   },
   "pdfkit/verify.py": {
-    "mtime": 1782048881.35356,
-    "ast_hash": "80030a272bb6a2154a37cf077eec392c",
+    "mtime": 1782053186.107503,
+    "ast_hash": "772a67796138a60e6e953bade075ae16",
     "semantic_hash": ""
   },
   "pyproject.toml": {
@@ -97,6 +97,46 @@
   "CLAUDE.md": {
     "mtime": 1781966602.2849922,
     "ast_hash": "881b89d0f10d36dbc4087ed448ef8350",
+    "semantic_hash": ""
+  },
+  "Tommy_CV-corrected.review/report.json": {
+    "mtime": 1782051373.4224195,
+    "ast_hash": "a3533a82d99faab3f87ec26e3c7a4cc5",
+    "semantic_hash": ""
+  },
+  "tests/test_fonts.py": {
+    "mtime": 1782053117.8009512,
+    "ast_hash": "74924973f206d8aacabc06159ab194be",
+    "semantic_hash": ""
+  },
+  "Tommy_CV-corrected.review/report.md": {
+    "mtime": 1782051373.4222324,
+    "ast_hash": "f66bff0ad26814de571a75c0554e3a6f",
+    "semantic_hash": ""
+  },
+  "docs/adr/0003-read-and-correct-tj-arrays-defer-cross-token-relayout.md": {
+    "mtime": 1782053407.1091502,
+    "ast_hash": "cd435e87693f75f80fab7b10fe58eb95",
+    "semantic_hash": ""
+  },
+  "pdfkit-handoff-20260621-220214.md": {
+    "mtime": 1782050671.5383036,
+    "ast_hash": "493470157001957d92fb88f711044aec",
+    "semantic_hash": ""
+  },
+  "Tommy_CV-corrected.review/after.png": {
+    "mtime": 1782051373.1310315,
+    "ast_hash": "f00d81f84c14a280225cf092618fb389",
+    "semantic_hash": ""
+  },
+  "Tommy_CV-corrected.review/before.png": {
+    "mtime": 1782051373.1081405,
+    "ast_hash": "bb767294a88cc36dc8703eebf3d6c502",
+    "semantic_hash": ""
+  },
+  "Tommy_CV-corrected.review/diff.png": {
+    "mtime": 1782051373.1546278,
+    "ast_hash": "4bd1b20e8c95257543658a92d04b8a4e",
     "semantic_hash": ""
   }
 }
